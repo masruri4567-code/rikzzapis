@@ -3,7 +3,7 @@ import { Response } from 'express';
 export function apiResponse(res: Response, success: boolean, data: any, message?: string): Response {
     const response: any = {
         success,
-        creator: "KayzzAoshi"
+        creator: "Barik Developer"
     };
 
     if (message) {
@@ -42,7 +42,7 @@ function generateCopyCommand(data: any): string {
 export function errorResponse(res: Response, message: string, statusCode: number = 500): Response {
     return res.status(statusCode).json({
         success: false,
-        creator: "KayzzAoshi",
+        creator: "Barik Developer",
         error: message
     });
 }
