@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZFloryn-Z</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="kyy.css">
+    <link rel="icon" href="https://raw.githubusercontent.com/kayzzaoshi-code/Uploader/main/file_1772878043301.jpeg" type="image/jpeg">
+    <style>
+        .section-block { max-width: 860px; margin: 0 auto 48px; padding: 0 16px; }
+        .section-heading {
+            font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 2px;
+            text-transform: uppercase; color: var(--ink4); margin-bottom: 20px;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .section-heading::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+
+        /* Uploader section */
+        .uploader-box {
+            background: var(--white); border: 1.5px solid var(--rule);
+            border-radius: var(--radius); padding: 28px 24px; display: flex;
+            flex-direction: column; gap: 18px;
+        }
+        .uploader-drop {
+            border: 2px dashed var(--rule); border-radius: var(--radsm);
+            padding: 40px 20px; text-align: center; cursor: pointer;
+            transition: all .2s; position: relative;
+        }
+        .uploader-drop:hover, .uploader-drop.drag-over {
+            border-color: var(--purple); background: var(--purple-lt);
+        }
+        .uploader-drop input[type=file] {
+            position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%;
+        }
+        .uploader-drop .drop-icon { font-size: 36px; color: var(--purple); margin-bottom: 8px; }
+        .uploader-drop .drop-text { font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--ink3); }
+        .uploader-drop .drop-hint { font-family: 'Geist Mono', monospace; font-size: 10px; color: var(--ink4); margin-top: 6px; }
+        .uploader-btn {
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            padding: 11px 20px; border-radius: var(--radsm); border: none;
+            background: var(--purple); color: #fff; font-family: 'Geist Mono', monospace;
+            font-size: 13px; font-weight: 600; cursor: pointer; transition: all .2s;
+        }
+        .uploader-btn:hover { opacity: .85; transform: translateY(-1px); }
+        .uploader-btn:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+        .upload-progress {
+            display: none; font-family: 'Geist Mono', monospace; font-size: 12px;
+            color: var(--ink3); text-align: center;
+        }
+        .upload-result {
+            display: none; background: var(--bg2); border: 1.5px solid var(--rule);
+            border-radius: var(--radsm); padding: 14px 16px; gap: 10px;
+            flex-direction: column;
+        }
+        .upload-result.show { display: flex; }
+        .upload-result-label {
+            font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 1px;
+            color: var(--ink4); text-transform: uppercase;
+        }
+        .upload-result-url {
+            font-family: 'Geist Mono', monospace; font-size: 12px; color: var(--purple);
+            word-break: break-all;
+        }
+        .upload-result-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+        .upload-result-btn {
+            display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px;
+            border-radius: 6px; border: 1.5px solid var(--rule); background: var(--white);
+            color: var(--ink2); font-family: 'Geist Mono', monospace; font-size: 11px;
+            cursor: pointer; text-decoration: none; transition: all .15s;
+        }
+        .upload-result-btn:hover { border-color: var(--purple); color: var(--purple); }
+        .upload-timer {
+            font-family: 'Geist Mono', monospace; font-size: 11px; color: var(--ink4);
+            display: flex; align-items: center; gap: 6px;
+        }
+        .upload-timer .timer-dot { width: 6px; height: 6px; border-radius: 50%; background: #f59e0b; flex-shrink: 0; animation: blink 1s infinite; }
+        @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+        .upload-timer .timer-urgent { color: #dc2626; }
+        .upload-file-info {
+            font-family: 'Geist Mono', monospace; font-size: 11px; color: var(--ink3);
+            display: flex; gap: 12px; flex-wrap: wrap;
+        }
+        .upload-list { display: flex; flex-direction: column; gap: 10px; }
+        .upload-item {
+            background: var(--bg); border: 1.5px solid var(--rule); border-radius: var(--radsm);
+            padding: 12px 14px; display: flex; flex-direction: column; gap: 8px;
+        }
+
+        /* Upload API Example */
+        .upload-example-wrap {
+            margin-top: 16px; border: 1.5px solid var(--rule); border-radius: var(--radsm);
+            overflow: hidden;
+        }
+        .upload-ex-title {
+            font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 600;
+            color: var(--ink3); padding: 10px 14px; background: var(--bg2);
+            border-bottom: 1px solid var(--rule);
+        }
+        .upload-ex-tabs {
+            display: flex; gap: 0; background: var(--bg2); border-bottom: 1px solid var(--rule);
+        }
+        .upload-ex-tab {
+            font-family: 'Geist Mono', monospace; font-size: 11px; color: var(--ink3);
+            background: none; border: none; padding: 8px 16px; cursor: pointer;
+            border-bottom: 2px solid transparent; transition: color .15s, border-color .15s;
+        }
+        .upload-ex-tab.active, .upload-ex-tab:hover { color: var(--purple); border-bottom-color: var(--purple); }
+        .upload-ex-body { position: relative; }
+        .ex-copy-wrap { position: absolute; top: 8px; right: 10px; z-index: 2; }
+        .ex-copy-btn {
+            display: inline-flex; align-items: center; gap: 4px;
+            font-family: 'Geist Mono', monospace; font-size: 10px; color: var(--ink3);
+            background: var(--bg2); border: 1px solid var(--rule); border-radius: 5px;
+            padding: 4px 8px; cursor: pointer; transition: color .15s, border-color .15s;
+        }
+        .ex-copy-btn:hover { color: var(--purple); border-color: var(--purple); }
+        .upload-ex-code {
+            font-family: 'Geist Mono', monospace; font-size: 12px; line-height: 1.7;
+            background: #0d1117; color: #e6edf3; margin: 0;
+            padding: 14px 16px; overflow-x: auto;
+        }
+        .upload-ex-code .ec-kw  { color: #ff7b72; }
+        .upload-ex-code .ec-str { color: #a5d6a7; }
+        .upload-ex-code .ec-fn  { color: #d2a8ff; }
+        .upload-ex-code .ec-flag{ color: #79c0ff; }
+        .upload-ex-code .ec-num { color: #f8a261; }
+        .upload-ex-code .ec-cmt { color: #8b949e; font-style: italic; }
+
+        /* Owner */
+        .owner-card {
+            background: var(--white); border: 1.5px solid var(--rule);
+            border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; gap: 20px;
+        }
+        .owner-top { display: flex; align-items: center; gap: 16px; }
+        .owner-avatar { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 3px solid var(--purple); flex-shrink: 0; }
+        .owner-info { flex: 1; }
+        .owner-name { font-family: 'Instrument Serif', serif; font-size: 24px; color: var(--ink); letter-spacing: -.5px; }
+        .owner-role { font-family: 'Geist Mono', monospace; font-size: 11px; color: var(--ink4); margin-top: 2px; }
+        .socmed-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; }
+        .socmed-link {
+            display: flex; align-items: center; gap: 10px; padding: 10px 14px;
+            border: 1.5px solid var(--rule); border-radius: var(--radsm); background: var(--bg);
+            color: var(--ink2); font-size: 13px; text-decoration: none;
+            transition: all .2s cubic-bezier(.22,1,.36,1); font-family: 'Outfit', sans-serif;
+        }
+        .socmed-link:hover {
+            border-color: var(--sm-color, var(--purple)); color: var(--sm-color, var(--purple));
+            background: var(--white); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,.07);
+        }
+        .socmed-link i { font-size: 16px; color: var(--sm-color, var(--purple)); flex-shrink: 0; }
+        .socmed-label { font-size: 12px; }
+        .socmed-label strong { display: block; font-size: 13px; color: var(--ink); }
+        .donasi-card {
+            background: linear-gradient(135deg, var(--purple-lt), var(--bg));
+            border: 1.5px solid rgba(139,92,246,.25); border-radius: var(--radsm);
+            padding: 14px 18px; display: flex; align-items: center; gap: 12px;
+        }
+        .donasi-card i { font-size: 22px; color: #e91e8c; }
+        .donasi-card-text { flex: 1; }
+        .donasi-card-title { font-family: 'Geist Mono', monospace; font-size: 12px; font-weight: 600; color: var(--ink); }
+        .donasi-card-num { font-family: 'Geist Mono', monospace; font-size: 14px; color: var(--purple); font-weight: 700; letter-spacing: .5px; }
+    </style>
+</head>
+<body class="light-mode">
+
+<div id="curtain"></div>
+<div id="overlay"></div>
+
+<aside id="sidebar">
+  <div class="sb-head">
+    <span class="sb-brand">Navigation</span>
+    <button class="sb-close" id="sidebarClose"><span class="material-icons">close</span></button>
+  </div>
+  <div class="sb-body">
+    <span class="sb-label">Pages</span>
+    <nav class="sb-nav">
+      <a href="/" class="sb-link"><span class="material-icons">home</span>Home</a>
+      <a href="/docs" class="sb-link"><span class="material-icons">api</span>Documentation</a>  
+    </nav>
+    <span class="sb-label">Links</span>
+    <nav class="sb-nav">
+      <a href="https://wa.me/6283167295612" target="_blank" class="sb-link"><span class="material-icons">open_in_new</span>Contact</a>
+      <a href="https://whatsapp.com/channel/0029VbCEBa77j6g2KN3NYB3A" target="_blank" class="sb-link"><span class="material-icons">open_in_new</span>Channel</a>
+    </nav>
+  </div>
+</aside>
+
+<header>
+  <div class="hdr">
+    <div class="hdr-left">
+      <a href="/" class="hdr-back"><span class="material-icons">arrow_back</span><span>Back</span></a>
+      <div class="hdr-sep"></div>
+      <div class="hdr-title">
+        <span class="live-dot"></span>
+        <span id="site-title">ZFloryn-Z</span>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <button class="theme-toggle" id="themeToggle">
+        <span class="material-icons" id="themeIcon">dark_mode</span>
+      </button>
+      <button class="btn-menu" id="sidebarToggle"><span class="material-icons">menu</span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+    <div class="profile-section">
+        <img src="https://raw.githubusercontent.com/kayzzaoshi-code/Uploader/main/file_1772878043301.jpeg" alt="ZFloryn-Z" class="profile-avatar-large">
+        <h1 class="profile-name-large">ZFloryn-Z</h1>
+        <p class="profile-bio-large">ZFloryn-Z Rest Api</p>
+    </div>
+
+    <div class="card-grid-5">
+        <a href="/docs" class="nav-card-sm">
+            <div class="nav-card-sm-icon"><i class="fa-solid fa-code"></i></div>
+            <div class="nav-card-sm-title">API Docs</div>
+            <div class="nav-card-sm-desc">Explore endpoints & try them out</div>
+        </a>
+        <a href="/chat" class="nav-card-sm">
+            <div class="nav-card-sm-icon"><i class="fa-solid fa-comments"></i></div>
+            <div class="nav-card-sm-title">Public Chat</div>
+            <div class="nav-card-sm-desc">Ngobrol bareng semua orang secara live</div>
+        </a>
+        <a href="/blog" class="nav-card-sm">
+            <div class="nav-card-sm-icon"><i class="fa-solid fa-newspaper"></i></div>
+            <div class="nav-card-sm-title">Blog</div>
+            <div class="nav-card-sm-desc">Baca artikel & update terbaru</div>
+        </a>
+        <a href="#uploader" class="nav-card-sm">
+            <div class="nav-card-sm-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+            <div class="nav-card-sm-title">Uploader</div>
+            <div class="nav-card-sm-desc">Upload file & dapet link instan (5 menit)</div>
+        </a>
+        <a href="#owner" class="nav-card-sm">
+            <div class="nav-card-sm-icon"><i class="fa-solid fa-user"></i></div>
+            <div class="nav-card-sm-title">Owner</div>
+            <div class="nav-card-sm-desc">Info kontak dan sosial media</div>
+        </a>
+    </div>
+
+    <!-- UPLOADER SECTION -->
+    <section id="uploader" class="section-block">
+        <div class="section-heading"><i class="fa-solid fa-cloud-arrow-up" style="color:var(--purple);font-size:12px"></i> File Uploader</div>
+        <div class="uploader-box">
+            <div class="uploader-drop" id="dropZone">
+                <input type="file" id="fileInput" multiple accept="*/*">
+                <div class="drop-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                <div class="drop-text">Drag & drop file di sini, atau klik untuk pilih</div>
+                <div class="drop-hint">Max 10MB per file • Auto hapus setelah 5 menit</div>
+            </div>
+            <div class="upload-progress" id="uploadProgress">
+                <i class="fa-solid fa-spinner fa-spin"></i> Mengupload...
+            </div>
+            <button class="uploader-btn" id="uploadBtn" disabled>
+                <i class="fa-solid fa-upload"></i> Upload File
+            </button>
+            <div class="upload-list" id="uploadList"></div>
+        </div>
+
+        <!-- API Example -->
+        <div class="upload-example-wrap">
+          <div class="upload-ex-title"><span class="material-icons" style="font-size:14px;vertical-align:middle;margin-right:4px">integration_instructions</span>API Usage Example</div>
+          <div class="upload-ex-tabs">
+            <button class="upload-ex-tab active" onclick="switchTab(this,'tab-curl')">cURL</button>
+            <button class="upload-ex-tab" onclick="switchTab(this,'tab-js')">JavaScript</button>
+            <button class="upload-ex-tab" onclick="switchTab(this,'tab-resp')">Response</button>
+          </div>
+          <div class="upload-ex-body">
+            <div id="tab-curl" class="upload-ex-pane active">
+              <div class="ex-copy-wrap">
+                <button class="ex-copy-btn" onclick="copyExCode('code-curl',this)"><span class="material-icons" style="font-size:13px">content_copy</span> Copy</button>
+              </div>
+              <pre id="code-curl" class="upload-ex-code"><span class="ec-kw">curl</span> <span class="ec-flag">-X POST</span> <span class="ec-str">https://yourapi.vercel.app/upload</span> \
+  <span class="ec-flag">-F</span> <span class="ec-str">"file=@/path/to/yourfile.jpg"</span></pre>
+            </div>
+            <div id="tab-js" class="upload-ex-pane" style="display:none">
+              <div class="ex-copy-wrap">
+                <button class="ex-copy-btn" onclick="copyExCode('code-js',this)"><span class="material-icons" style="font-size:13px">content_copy</span> Copy</button>
+              </div>
+              <pre id="code-js" class="upload-ex-code"><span class="ec-kw">const</span> form = <span class="ec-kw">new</span> <span class="ec-fn">FormData</span>();
+form.<span class="ec-fn">append</span>(<span class="ec-str">'file'</span>, fileInput.files[<span class="ec-num">0</span>]);
+
+<span class="ec-kw">const</span> res = <span class="ec-kw">await</span> <span class="ec-fn">fetch</span>(<span class="ec-str">'/upload'</span>, {
+  method: <span class="ec-str">'POST'</span>,
+  body: form
+});
+<span class="ec-kw">const</span> data = <span class="ec-kw">await</span> res.<span class="ec-fn">json</span>();
+console.<span class="ec-fn">log</span>(data.url); <span class="ec-cmt">// → https://yourapi.vercel.app/f/abc123</span></pre>
+            </div>
+            <div id="tab-resp" class="upload-ex-pane" style="display:none">
+              <pre class="upload-ex-code json-viewer" style="border-radius:0;border:none;padding:12px 14px;max-height:none"><span class="jb">{</span>
+  <span class="jk">"status"</span>: <span class="jb">true</span>,
+  <span class="jk">"url"</span>: <span class="js">"https://yourapi.vercel.app/f/abc123xyz"</span>,
+  <span class="jk">"expires_in"</span>: <span class="js">"5 minutes"</span>
+<span class="jb">}</span></pre>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- OWNER SECTION -->
+    <section id="owner" class="section-block">
+        <div class="section-heading"><i class="fa-solid fa-user" style="color:var(--purple);font-size:12px"></i> Owner Information</div>
+        <div class="owner-card">
+            <div class="owner-top">
+                <img src="https://raw.githubusercontent.com/kayzzaoshi-code/Uploader/main/file_1772878043301.jpeg" alt="ZFloryn-Z" class="owner-avatar">
+                <div class="owner-info">
+                    <div class="owner-name">ZFloryn-Z</div>
+                    <div class="owner-role">Developer & Owner — ZFloryn-Z Rest API</div>
+                </div>
+            </div>
+            <div class="socmed-grid">
+                <a href="https://wa.me/6283167295612" target="_blank" class="socmed-link" style="--sm-color:#25d366">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <div class="socmed-label"><strong>WhatsApp</strong>Chat Langsung</div>
+                </a>
+                <a href="https://whatsapp.com/channel/0029VbCEBa77j6g2KN3NYB3A" target="_blank" class="socmed-link" style="--sm-color:#25d366">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <div class="socmed-label"><strong>WA Channel</strong>Follow Channel</div>
+                </a>
+                <a href="https://chat.whatsapp.com/KJu5KYX5mWBLSP8Q6aRFBG" target="_blank" class="socmed-link" style="--sm-color:#25d366">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <div class="socmed-label"><strong>Grup WA</strong>Join Grup</div>
+                </a>
+                <a href="https://www.youtube.com/@KazzOfficialZ4Z" target="_blank" class="socmed-link" style="--sm-color:#ff0000">
+                    <i class="fa-brands fa-youtube"></i>
+                    <div class="socmed-label"><strong>YouTube</strong>KazzOfficialZ4Z</div>
+                </a>
+                <a href="https://t.me/ZFloryn-Zy" target="_blank" class="socmed-link" style="--sm-color:#229ed9">
+                    <i class="fa-brands fa-telegram"></i>
+                    <div class="socmed-label"><strong>Telegram</strong>@ZFloryn-Zy</div>
+                </a>
+            </div>
+            <div class="donasi-card">
+                <i class="fa-solid fa-heart"></i>
+                <div class="donasi-card-text">
+                    <div class="donasi-card-title">Donasi / Support</div>
+                    <div class="donasi-card-num">Dana / GoPay / OVO: 6283872294693</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="foot">
+        <p class="foot-text">© <span id="yr"></span> ZFloryn-Z — All Rights Reserved</p>
+    </div>
+</main>
+
+<div id="custom-toast" class="hidden">
+    <div class="toast-content">
+        <i class="fa-solid" id="toast-icon"></i>
+        <span id="toast-message"></span>
+    </div>
+</div>
+
+<script src="kyy.js"></script>
+<script>
+(function() {
+    // ── Uploader dengan auto-delete 5 menit ──
+    const EXPIRE_MS = 5 * 60 * 1000; // 5 menit
+    const fileInput  = document.getElementById('fileInput');
+    const dropZone   = document.getElementById('dropZone');
+    const uploadBtn  = document.getElementById('uploadBtn');
+    const uploadProg = document.getElementById('uploadProgress');
+    const uploadList = document.getElementById('uploadList');
+
+    let selectedFiles = [];
+    // Simpan upload history di memory (per session)
+    let uploadedItems = JSON.parse(sessionStorage.getItem('zf_uploads') || '[]');
+
+    function saveUploads() {
+        sessionStorage.setItem('zf_uploads', JSON.stringify(uploadedItems));
+    }
+
+    function formatSize(bytes) {
+        if (bytes < 1024) return bytes + ' B';
+        if (bytes < 1024*1024) return (bytes/1024).toFixed(1) + ' KB';
+        return (bytes/(1024*1024)).toFixed(1) + ' MB';
+    }
+
+    function formatTimer(ms) {
+        if (ms <= 0) return '<span class="timer-urgent">Kadaluarsa</span>';
+        const m = Math.floor(ms / 60000);
+        const s = Math.floor((ms % 60000) / 1000);
+        const str = m + ':' + String(s).padStart(2,'0');
+        return ms < 60000 ? '<span class="timer-urgent">' + str + '</span>' : str;
+    }
+
+    function copyURL(url) {
+        if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(url).catch(() => fallbackCopy(url));
+        } else { fallbackCopy(url); }
+    }
+    function fallbackCopy(text) {
+        var ta = document.createElement('textarea');
+        ta.value = text; ta.style.position='fixed'; ta.style.opacity='0';
+        document.body.appendChild(ta); ta.focus(); ta.select();
+        try { document.execCommand('copy'); } catch(e){}
+        document.body.removeChild(ta);
+    }
+
+    function renderList() {
+        const now = Date.now();
+        // Hapus yang sudah expired
+        uploadedItems = uploadedItems.filter(item => now < item.expireAt);
+        saveUploads();
+
+        if (!uploadedItems.length) {
+            uploadList.innerHTML = '';
+            return;
+        }
+
+        uploadList.innerHTML = uploadedItems.map((item, i) => {
+            const remaining = item.expireAt - now;
+            return '<div class="upload-item" id="upload-item-' + i + '">' +
+                '<div class="upload-file-info">' +
+                    '<span><i class="fa-solid fa-file" style="color:var(--purple)"></i> ' + escHtml(item.name) + '</span>' +
+                    '<span>' + formatSize(item.size) + '</span>' +
+                '</div>' +
+                '<div class="upload-result-url">' + escHtml(item.url) + '</div>' +
+                '<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">' +
+                    '<div class="upload-timer" id="timer-' + i + '">' +
+                        '<div class="timer-dot"></div>' +
+                        'Hapus dalam: ' + formatTimer(remaining) +
+                    '</div>' +
+                    '<div class="upload-result-actions">' +
+                        '<button class="upload-result-btn" onclick="copyURL(\'' + escHtml(item.url) + '\');this.innerHTML=\'<i class=&quot;fa-solid fa-check&quot;></i> Copied\';setTimeout(()=>this.innerHTML=\'<i class=&quot;fa-solid fa-copy&quot;></i> Copy\',1500)">' +
+                            '<i class="fa-solid fa-copy"></i> Copy' +
+                        '</button>' +
+                        '<a class="upload-result-btn" href="' + escHtml(item.url) + '" target="_blank">' +
+                            '<i class="fa-solid fa-arrow-up-right-from-square"></i> Buka' +
+                        '</a>' +
+                    '</div>' +
+                '</div>' +
+            '</div>';
+        }).join('');
+    }
+
+    function escHtml(s) {
+        return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    // Update timer tiap detik
+    setInterval(() => {
+        const now = Date.now();
+        uploadedItems.forEach((item, i) => {
+            const el = document.getElementById('timer-' + i);
+            if (!el) return;
+            const rem = item.expireAt - now;
+            if (rem <= 0) { renderList(); return; }
+            el.innerHTML = '<div class="timer-dot"></div>Hapus dalam: ' + formatTimer(rem);
+        });
+    }, 1000);
+
+    // Render saat load
+    renderList();
+
+    // Drag and drop
+    dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('drag-over'); });
+    dropZone.addEventListener('dragleave', () => dropZone.classList.remove('drag-over'));
+    dropZone.addEventListener('drop', e => {
+        e.preventDefault();
+        dropZone.classList.remove('drag-over');
+        const files = Array.from(e.dataTransfer.files);
+        if (files.length) { selectedFiles = files; uploadBtn.disabled = false; updateDropLabel(); }
+    });
+
+    fileInput.addEventListener('change', () => {
+        selectedFiles = Array.from(fileInput.files);
+        uploadBtn.disabled = selectedFiles.length === 0;
+        updateDropLabel();
+    });
+
+    function updateDropLabel() {
+        const txt = dropZone.querySelector('.drop-text');
+        if (txt) txt.textContent = selectedFiles.length + ' file dipilih: ' + selectedFiles.map(f => f.name).join(', ');
+    }
+
+    uploadBtn.addEventListener('click', async () => {
+        if (!selectedFiles.length) return;
+        uploadBtn.disabled = true;
+        uploadProg.style.display = 'block';
+
+        for (const file of selectedFiles) {
+            if (file.size > 10 * 1024 * 1024) {
+                showToast(file.name + ' melebihi 10MB, dilewati.', 'warning');
+                continue;
+            }
+            try {
+                const fd = new FormData();
+                fd.append('file', file);
+                const res = await fetch('/upload', { method: 'POST', body: fd });
+                const data = await res.json();
+                if (data && (data.url || data.link)) {
+                    const url = data.url || data.link;
+                    uploadedItems.unshift({
+                        name: file.name,
+                        size: file.size,
+                        url: url,
+                        expireAt: Date.now() + EXPIRE_MS
+                    });
+                    saveUploads();
+                    // Schedule auto-remove dari list
+                    setTimeout(() => renderList(), EXPIRE_MS + 100);
+                } else {
+                    showToast('Gagal upload ' + file.name, 'error');
+                }
+            } catch (err) {
+                showToast('Error: ' + err.message, 'error');
+            }
+        }
+
+        uploadProg.style.display = 'none';
+        uploadBtn.disabled = false;
+        selectedFiles = [];
+        fileInput.value = '';
+        dropZone.querySelector('.drop-text').textContent = 'Drag & drop file di sini, atau klik untuk pilih';
+        renderList();
+    });
+
+    function showToast(msg, type) {
+        const toast = document.getElementById('custom-toast');
+        const msgEl = document.getElementById('toast-message');
+        const icon = document.getElementById('toast-icon');
+        if (!toast) return;
+        const types = { success:'fa-check', error:'fa-xmark', warning:'fa-exclamation', info:'fa-info' };
+        const colors = { success:'#10b981', error:'#dc2626', warning:'#d97706', info:'#8b5cf6' };
+        if (icon) { icon.className = 'fa-solid ' + (types[type]||'fa-info'); icon.style.color = colors[type]||'#8b5cf6'; }
+        if (msgEl) msgEl.innerText = msg;
+        toast.classList.remove('hidden');
+        setTimeout(() => toast.classList.add('hidden'), 2500);
+    }
+
+    window.copyURL = copyURL;
+})();
+
+// Upload example tabs
+window.switchTab = function(btn, tabId) {
+    document.querySelectorAll('.upload-ex-tab').forEach(function(t) { t.classList.remove('active'); });
+    document.querySelectorAll('.upload-ex-pane').forEach(function(p) { p.style.display = 'none'; });
+    btn.classList.add('active');
+    var pane = document.getElementById(tabId);
+    if (pane) pane.style.display = 'block';
+};
+
+window.copyExCode = function(codeId, btn) {
+    var el = document.getElementById(codeId);
+    if (!el) return;
+    var text = el.innerText || el.textContent;
+    var orig = btn.innerHTML;
+    function ok() { btn.innerHTML = '<span class="material-icons" style="font-size:13px">check</span> Copied!'; setTimeout(function(){ btn.innerHTML = orig; }, 1500); }
+    if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(text).then(ok).catch(ok); }
+    else {
+        var ta = document.createElement('textarea'); ta.value = text; ta.style.cssText = 'position:fixed;opacity:0';
+        document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); ok();
+    }
+};
+</script>
+</body>
+</html>
