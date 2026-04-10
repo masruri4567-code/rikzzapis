@@ -1,0 +1,4087 @@
+{
+  "settings": {
+    "creator": "KazzTzy",
+    "apiName": "ZFloryn-Z",
+    "description": "A free and reliable API service designed for modern application development. Built with Node.js and TypeScript, delivering fast performance, stable endpoints, and easy integration.",
+    "apiVersion": "v1.0",
+    "visitors": 0,
+    "favicon": "https://raw.githubusercontent.com/kayzzaoshi-code/Uploader/main/file_1772878043301.jpeg",
+    "thumbnail": "https://raw.githubusercontent.com/kayzzaoshi-code/Uploader/main/file_1772878043301.jpeg",
+    "channelUrl": "https://whatsapp.com/channel/0029VbCEBa77j6g2KN3NYB3A",
+    "github": "https://github.com/ZFloryn-Z"
+  },
+  "tags": {
+    "anime": [
+      {
+        "name": "Animeinfo",
+        "endpoint": "/api/anime/animeinfo",
+        "filename": "animeinfo",
+        "method": "GET",
+        "description": "animeinfo endpoint",
+        "params": [
+          {
+            "name": "q",
+            "description": "Judul anime",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Animesearch",
+        "endpoint": "/api/anime/animesearch",
+        "filename": "animesearch",
+        "method": "GET",
+        "description": "animesearch endpoint",
+        "params": [
+          {
+            "name": "q",
+            "description": "Judul anime",
+            "required": true
+          }
+        ]
+      },
+      {
+    "name": "AniDB Search",
+    "endpoint": "/api/anime/anidb",
+    "filename": "anidb",
+    "method": "GET",
+    "params": [
+      {
+        "name": "q",
+        "required": true,
+        "description": "Kata kunci pencarian anime di AniDB"}
+        ]
+        },
+        {
+        "name": "Animestorywa",
+        "endpoint": "/api/anime/animestorywa",
+        "filename": "animestorywa",
+        "method": "GET",
+        "description": "animestorywa endpoint",
+        "params": []
+      },
+      {
+    "name": "Awoo",
+    "endpoint": "/api/anime/awoo",
+    "filename": "awoo",
+    "method": "GET",
+    "description": "awoo anime endpoint",
+    "params": []
+  },
+  {
+    "name": "Bite",
+    "endpoint": "/api/anime/bite",
+    "filename": "bite",
+    "method": "GET",
+    "description": "bite anime endpoint",
+    "params": []
+  },
+  {
+    "name": "Blush",
+    "endpoint": "/api/anime/blush",
+    "filename": "blush",
+    "method": "GET",
+    "description": "blush anime endpoint",
+    "params": []
+  },
+  {
+    "name": "Bonk",
+    "endpoint": "/api/anime/bonk",
+    "filename": "bonk",
+    "method": "GET",
+    "description": "bonk anime endpoint",
+    "params": []
+  },
+  {
+    "name": "Bully",
+    "endpoint": "/api/anime/bully",
+    "filename": "bully",
+    "method": "GET",
+    "description": "bully anime endpoint",
+    "params": []
+  },
+  {
+    "name": "Cringe",
+    "endpoint": "/api/anime/cringe",
+    "filename": "cringe",
+    "method": "GET",
+    "description": "cringe anime endpoint",
+    "params": []
+  },
+  {
+    "name": "Cry",
+    "endpoint": "/api/anime/cry",
+    "filename": "cry",
+    "method": "GET",
+    "description": "cry anime endpoint",
+    "params": []
+  },
+  {
+    "name": "Dance",
+    "endpoint": "/api/anime/dance",
+    "filename": "dance",
+    "method": "GET",
+    "description": "dance anime endpoint",
+    "params": []
+  },
+  {
+    "name": "Glomp",
+    "endpoint": "/api/anime/glomp",
+    "filename": "glomp",
+    "method": "GET",
+    "description": "glomp anime endpoint",
+    "params": []
+  },
+  {
+    "name": "HandHold",
+    "endpoint": "/api/anime/handhold",
+    "filename": "handhold",
+    "method": "GET",
+    "description": "handhold anime endpoint",
+    "params": []
+  },
+  {
+    "name": "Happy",
+    "endpoint": "/api/anime/happy",
+    "filename": "happy",
+    "method": "GET",
+    "description": "happy anime endpoint",
+    "params": []
+  },
+  {
+    "name": "HighFive",
+    "endpoint": "/api/anime/highfive",
+    "filename": "highfive",
+    "method": "GET",
+    "description": "highfive anime endpoint",
+    "params": []
+  },
+  {
+    "name": "Lick",
+    "endpoint": "/api/anime/lick",
+    "filename": "lick",
+    "method": "GET",
+    "description": "lick anime endpoint",
+    "params": []
+  },
+  {
+    "name": "Neko",
+    "endpoint": "/api/anime/neko",
+    "filename": "neko",
+    "method": "GET",
+    "description": "neko anime endpoint",
+    "params": []
+  },
+  {
+    "name": "Poke",
+    "endpoint": "/api/anime/poke",
+    "filename": "poke",
+    "method": "GET",
+    "description": "poke anime endpoint",
+    "params": []
+  },
+  {
+    "name": "Smile",
+    "endpoint": "/api/anime/smile",
+    "filename": "smile",
+    "method": "GET",
+    "description": "smile anime endpoint",
+    "params": []
+  },
+  {
+    "name": "Smug",
+    "endpoint": "/api/anime/smug",
+    "filename": "smug",
+    "method": "GET",
+    "description": "smug anime endpoint",
+    "params": []
+  },
+  {
+    "name": "Wave",
+    "endpoint": "/api/anime/wave",
+    "filename": "wave",
+    "method": "GET",
+    "description": "wave anime endpoint",
+    "params": []
+  },
+  {
+    "name": "Wink",
+    "endpoint": "/api/anime/wink",
+    "filename": "wink",
+    "method": "GET",
+    "description": "wink anime endpoint",
+    "params": []
+  },
+  {
+    "name": "Yeet",
+    "endpoint": "/api/anime/yeet",
+    "filename": "yeet",
+    "method": "GET",
+    "description": "yeet anime endpoint",
+    "params": []
+    },
+    {
+        "name": "Avatar",
+        "endpoint": "/api/anime/avatar",
+        "filename": "avatar",
+        "method": "GET",
+        "description": "avatar endpoint",
+        "params": []
+      },
+      {
+        "name": "Chitoge",
+        "endpoint": "/api/anime/chitoge",
+        "filename": "chitoge",
+        "method": "GET",
+        "description": "chitoge endpoint",
+        "params": []
+      },
+      {
+        "name": "Cuddle",
+        "endpoint": "/api/anime/cuddle",
+        "filename": "cuddle",
+        "method": "GET",
+        "description": "cuddle endpoint",
+        "params": []
+      },
+      {
+        "name": "Deidara",
+        "endpoint": "/api/anime/deidara",
+        "filename": "deidara",
+        "method": "GET",
+        "description": "deidara endpoint",
+        "params": []
+      },
+      {
+        "name": "Erza",
+        "endpoint": "/api/anime/erza",
+        "filename": "erza",
+        "method": "GET",
+        "description": "erza endpoint",
+        "params": []
+      },
+      {
+        "name": "Feed",
+        "endpoint": "/api/anime/feed",
+        "filename": "feed",
+        "method": "GET",
+        "description": "feed endpoint",
+        "params": []
+      },
+      {
+        "name": "Fox Girl",
+        "endpoint": "/api/anime/fox_girl",
+        "filename": "fox_girl",
+        "method": "GET",
+        "description": "fox_girl endpoint",
+        "params": []
+      },
+      {
+        "name": "Gecg",
+        "endpoint": "/api/anime/gecg",
+        "filename": "gecg",
+        "method": "GET",
+        "description": "gecg endpoint",
+        "params": []
+      },
+      {
+        "name": "Gremory",
+        "endpoint": "/api/anime/gremory",
+        "filename": "gremory",
+        "method": "GET",
+        "description": "gremory endpoint",
+        "params": []
+      },
+      {
+        "name": "Hestia",
+        "endpoint": "/api/anime/hestia",
+        "filename": "hestia",
+        "method": "GET",
+        "description": "hestia endpoint",
+        "params": []
+      },
+      {
+        "name": "Hinata",
+        "endpoint": "/api/anime/hinata",
+        "filename": "hinata",
+        "method": "GET",
+        "description": "hinata endpoint",
+        "params": []
+      },
+      {
+        "name": "Hitorigottoh",
+        "endpoint": "/api/anime/hitorigottoh",
+        "filename": "hitorigottoh",
+        "method": "GET",
+        "description": "hitorigottoh endpoint",
+        "params": []
+      },
+      {
+        "name": "Hug",
+        "endpoint": "/api/anime/hug",
+        "filename": "hug",
+        "method": "GET",
+        "description": "hug endpoint",
+        "params": []
+      },
+      {
+        "name": "Inori",
+        "endpoint": "/api/anime/inori",
+        "filename": "inori",
+        "method": "GET",
+        "description": "inori endpoint",
+        "params": []
+      },
+      {
+        "name": "Isuzu",
+        "endpoint": "/api/anime/isuzu",
+        "filename": "isuzu",
+        "method": "GET",
+        "description": "isuzu endpoint",
+        "params": []
+      },
+      {
+        "name": "Itachi",
+        "endpoint": "/api/anime/itachi",
+        "filename": "itachi",
+        "method": "GET",
+        "description": "itachi endpoint",
+        "params": []
+      },
+      {
+        "name": "Itori",
+        "endpoint": "/api/anime/itori",
+        "filename": "itori",
+        "method": "GET",
+        "description": "itori endpoint",
+        "params": []
+      },
+      {
+        "name": "Kagura",
+        "endpoint": "/api/anime/kagura",
+        "filename": "kagura",
+        "method": "GET",
+        "description": "kagura endpoint",
+        "params": []
+      },
+      {
+        "name": "Kiss",
+        "endpoint": "/api/anime/kiss",
+        "filename": "kiss",
+        "method": "GET",
+        "description": "kiss endpoint",
+        "params": []
+      },
+      {    
+        "name": "Kuriyama",
+        "endpoint": "/api/anime/kuriyama",
+        "filename": "kuriyama",
+        "method": "GET",
+        "description": "kuriyama endpoint",
+        "params": []
+      },
+      {
+        "name": "Kuroha",
+        "endpoint": "/api/anime/kuroha",
+        "filename": "kuroha",
+        "method": "GET",
+        "description": "kuroha endpoint",
+        "params": []
+      },
+      {
+        "name": "Kurumi",
+        "endpoint": "/api/anime/kurumi",
+        "filename": "kurumi",
+        "method": "GET",
+        "description": "kurumi endpoint",
+        "params": []
+      },
+      {
+        "name": "Madara",
+        "endpoint": "/api/anime/madara",
+        "filename": "madara",
+        "method": "GET",
+        "description": "madara endpoint",
+        "params": []
+      },
+      {
+        "name": "Mikasa",
+        "endpoint": "/api/anime/mikasa",
+        "filename": "mikasa",
+        "method": "GET",
+        "description": "mikasa endpoint",
+        "params": []
+      },
+      {
+        "name": "Miku",
+        "endpoint": "/api/anime/miku",
+        "filename": "miku",
+        "method": "GET",
+        "description": "miku endpoint",
+        "params": []
+      },
+      {
+        "name": "Minato",
+        "endpoint": "/api/anime/minato",
+        "filename": "minato",
+        "method": "GET",
+        "description": "minato endpoint",
+        "params": []
+      },
+      {
+        "name": "Naruto",
+        "endpoint": "/api/anime/naruto",
+        "filename": "naruto",
+        "method": "GET",
+        "description": "naruto endpoint",
+        "params": []
+      },
+      {
+        "name": "Natsukawa",
+        "endpoint": "/api/anime/natsukawa",
+        "filename": "natsukawa",
+        "method": "GET",
+        "description": "natsukawa endpoint",
+        "params": []
+      },
+      {
+        "name": "Nekoanime",
+        "endpoint": "/api/anime/nekoanime",
+        "filename": "nekoanime",
+        "method": "GET",
+        "description": "nekoanime endpoint",
+        "params": []
+      },
+      {
+        "name": "Nezuko",
+        "endpoint": "/api/anime/nezuko",
+        "filename": "nezuko",
+        "method": "GET",
+        "description": "nezuko endpoint",
+        "params": []
+      },
+      {
+        "name": "Nishimiya",
+        "endpoint": "/api/anime/nishimiya",
+        "filename": "nishimiya",
+        "method": "GET",
+        "description": "nishimiya endpoint",
+        "params": []
+      },
+      {
+        "name": "Onepiece",
+        "endpoint": "/api/anime/onepiece",
+        "filename": "onepiece",
+        "method": "GET",
+        "description": "onepiece endpoint",
+        "params": []
+      },
+      { 
+        "name": "Pat",
+        "endpoint": "/api/anime/pat",
+        "filename": "pat",
+        "method": "GET",
+        "description": "pat endpoint",
+        "params": []
+      },
+      {
+        "name": "Quote",
+        "endpoint": "/api/anime/quote",
+        "filename": "quote",
+        "method": "GET",
+        "description": "quote endpoint",
+        "params": []
+      },
+      {
+        "name": "Rem",
+        "endpoint": "/api/anime/rem",
+        "filename": "rem",
+        "method": "GET",
+        "description": "rem endpoint",
+        "params": []
+      },
+      {
+        "name": "Rize",
+        "endpoint": "/api/anime/rize",
+        "filename": "rize",
+        "method": "GET",
+        "description": "rize endpoint",
+        "params": []
+      },
+      {
+        "name": "Sakura",
+        "endpoint": "/api/anime/sakura",
+        "filename": "sakura",
+        "method": "GET",
+        "description": "sakura endpoint",
+        "params": []
+      },
+      {
+        "name": "Sasuke",
+        "endpoint": "/api/anime/sasuke",
+        "filename": "sasuke",
+        "method": "GET",
+        "description": "sasuke endpoint",
+        "params": []
+      },
+      {
+        "name": "Shina",
+        "endpoint": "/api/anime/shina",
+        "filename": "shina",
+        "method": "GET",
+        "description": "shina endpoint",
+        "params": []
+      },
+      {
+        "name": "Shinka",
+        "endpoint": "/api/anime/shinka",
+        "filename": "shinka",
+        "method": "GET",
+        "description": "shinka endpoint",
+        "params": []
+      },
+      {
+        "name": "Shizuka",
+        "endpoint": "/api/anime/shizuka",
+        "filename": "shizuka",
+        "method": "GET",
+        "description": "shizuka endpoint",
+        "params": []
+      },
+      {
+        "name": "Slap",
+        "endpoint": "/api/anime/slap",
+        "filename": "slap",
+        "method": "GET",
+        "description": "slap endpoint",
+        "params": []
+      },
+      {
+        "name": "Tickle",
+        "endpoint": "/api/anime/tickle",
+        "filename": "tickle",
+        "method": "GET",
+        "description": "tickle endpoint",
+        "params": []
+      },
+      {
+        "name": "Tomori",
+        "endpoint": "/api/anime/tomori",
+        "filename": "tomori",
+        "method": "GET",
+        "description": "tomori endpoint",
+        "params": []
+      },
+      {
+        "name": "Toukachan",
+        "endpoint": "/api/anime/toukachan",
+        "filename": "toukachan",
+        "method": "GET",
+        "description": "toukachan endpoint",
+        "params": []
+      },
+      {
+        "name": "Tsunade",
+        "endpoint": "/api/anime/tsunade",
+        "filename": "tsunade",
+        "method": "GET",
+        "description": "tsunade endpoint",
+        "params": []
+      },
+      {
+        "name": "Waifu2",
+        "endpoint": "/api/anime/waifu2",
+        "filename": "waifu2",
+        "method": "GET",
+        "description": "waifu2 endpoint",
+        "params": []
+      },
+      {
+        "name": "Wallpaper",
+        "endpoint": "/api/anime/wallpaper",
+        "filename": "wallpaper",
+        "method": "GET",
+        "description": "wallpaper endpoint",
+        "params": []
+      },
+      {
+        "name": "Yatogami",
+        "endpoint": "/api/anime/yatogami",
+        "filename": "yatogami",
+        "method": "GET",
+        "description": "yatogami endpoint",
+        "params": []
+      },
+      {
+        "name": "Yuki",
+        "endpoint": "/api/anime/yuki",
+        "filename": "yuki",
+        "method": "GET",
+        "description": "yuki endpoint",
+        "params": []
+      }
+    ],
+    "asupan": [
+      {
+        "name": "Bocil",
+        "endpoint": "/api/asupan/bocil",
+        "filename": "bocil",
+        "method": "GET",
+        "description": "bocil endpoint",
+        "params": []
+      },
+      {
+        "name": "Bohaysma",
+        "endpoint": "/api/asupan/bohaysma",
+        "filename": "bohaysma",
+        "method": "GET",
+        "description": "bohaysma endpoint",
+        "params": []
+      },
+      {
+        "name": "Cewebohay",
+        "endpoint": "/api/asupan/cewebohay",
+        "filename": "cewebohay",
+        "method": "GET",
+        "description": "cewebohay endpoint",
+        "params": []
+      },
+      {
+        "name": "Cewesmabohay1",
+        "endpoint": "/api/asupan/cewesmabohay1",
+        "filename": "cewesmabohay1",
+        "method": "GET",
+        "description": "cewesmabohay1 endpoint",
+        "params": []
+      },
+      {
+        "name": "Gheayubi",
+        "endpoint": "/api/asupan/gheayubi",
+        "filename": "gheayubi",
+        "method": "GET",
+        "description": "gheayubi endpoint",
+        "params": []
+      },
+      {
+        "name": "Kayes",
+        "endpoint": "/api/asupan/kayes",
+        "filename": "kayes",
+        "method": "GET",
+        "description": "kayes endpoint",
+        "params": []
+      },
+      {
+        "name": "Notnot",
+        "endpoint": "/api/asupan/notnot",
+        "filename": "notnot",
+        "method": "GET",
+        "description": "notnot endpoint",
+        "params": []
+      },
+      {
+        "name": "Onlyfans",
+        "endpoint": "/api/asupan/onlyfans",
+        "filename": "onlyfans",
+        "method": "GET",
+        "description": "onlyfans endpoint",
+        "params": []
+      },
+      {
+        "name": "Panrika",
+        "endpoint": "/api/asupan/panrika",
+        "filename": "panrika",
+        "method": "GET",
+        "description": "panrika endpoint",
+        "params": []
+      },
+      {
+        "name": "Santuy",
+        "endpoint": "/api/asupan/santuy",
+        "filename": "santuy",
+        "method": "GET",
+        "description": "santuy endpoint",
+        "params": []
+      },
+      {
+        "name": "Tiktokgirl",
+        "endpoint": "/api/asupan/tiktokgirl",
+        "filename": "tiktokgirl",
+        "method": "GET",
+        "description": "tiktokgirl endpoint",
+        "params": []
+      },
+      {
+        "name": "Ukhty",
+        "endpoint": "/api/asupan/ukhty",
+        "filename": "ukhty",
+        "method": "GET",
+        "description": "ukhty endpoint",
+        "params": []
+      }
+    ],
+     "nsfw": [
+      {
+    "name": "NSFW Neko",
+    "endpoint": "/api/nsfw/neko",
+    "filename": "neko",
+    "method": "GET",
+    "description": "nsfw neko endpoint",
+    "params": []
+  },
+  {
+    "name": "NSFW Blowjob",
+    "endpoint": "/api/nsfw/blowjob",
+    "filename": "blowjob",
+    "method": "GET",
+    "description": "nsfw blowjob endpoint",
+    "params": []
+  },
+  {
+    "name": "NSFW Trap",
+    "endpoint": "/api/nsfw/trap",
+    "filename": "trap",
+    "method": "GET",
+    "description": "nsfw trap endpoint",
+    "params": []
+  },
+  {
+    "name": "NSFW Waifu",
+    "endpoint": "/api/nsfw/waifu",
+    "filename": "waifu",
+    "method": "GET",
+    "description": "nsfw waifu endpoint",
+    "params": []
+  },
+  {
+    "name": "Ass",
+    "endpoint": "/api/nsfw/ass",
+    "filename": "ass",
+    "method": "GET",
+    "description": "nsfw ass endpoint",
+    "params": []
+  },
+  {
+    "name": "Bdsm",
+    "endpoint": "/api/nsfw/bdsm",
+    "filename": "bdsm",
+    "method": "GET",
+    "description": "nsfw bdsm endpoint",
+    "params": []
+  },
+  {
+    "name": "Cum",
+    "endpoint": "/api/nsfw/cum",
+    "filename": "cum",
+    "method": "GET",
+    "description": "nsfw cum endpoint",
+    "params": []
+  },
+  {
+    "name": "Gangbang",
+    "endpoint": "/api/nsfw/gangbang",
+    "filename": "gangbang",
+    "method": "GET",
+    "description": "nsfw gangbang endpoint",
+    "params": []
+  },
+  {
+    "name": "Hentai",
+    "endpoint": "/api/nsfw/hentai",
+    "filename": "hentai",
+    "method": "GET",
+    "description": "nsfw hentai endpoint",
+    "params": []
+  },
+  {
+    "name": "Kasedaiki",
+    "endpoint": "/api/nsfw/kasedaiki",
+    "filename": "kasedaiki",
+    "method": "GET",
+    "description": "nsfw kasedaiki endpoint",
+    "params": []
+  },
+  {
+    "name": "Manstrubation",
+    "endpoint": "/api/nsfw/manstrubation",
+    "filename": "manstrubation",
+    "method": "GET",
+    "description": "nsfw manstrubation endpoint",
+    "params": []
+  },
+  {
+    "name": "Opaianime",
+    "endpoint": "/api/nsfw/opaianime",
+    "filename": "opaianime",
+    "method": "GET",
+    "description": "nsfw opaianime endpoint",
+    "params": []
+         }
+    ],
+    "search": [
+  {
+    "name": "Youtube Search",
+    "endpoint": "/api/search/yts",
+    "filename": "yts",
+    "method": "GET",
+    "params": [
+      {
+        "name": "q",
+        "required": true,
+        "description": "Query"
+      }
+    ]
+  },
+  {
+  "name": "GSM Arena Phone Specs",
+  "endpoint": "/api/search/gsm",
+  "filename": "gsm",
+  "method": "GET",
+  "params": [
+    {
+      "name": "q",
+      "required": true,
+      "description": "Nama HP yang ingin dicari"}
+      ]
+      },
+      {
+  "name": "iQIYI Search",
+  "endpoint": "/api/search/iq",
+  "filename": "iq",
+  "method": "GET",
+  "params": [
+    {
+      "name": "q",
+      "required": true,
+      "description": "Kata kunci pencarian drama, anime, atau film di iQIYI"}
+      ]
+      },
+      {
+    "name": "Sfile Search",
+    "description": "Mencari file di Sfile berdasarkan keyword dan menampilkan title, size, tanggal upload, serta link file.",
+    "endpoint": "/api/search/sfile",
+    "filename": "sfilesearch",
+    "method": "GET",
+    "params": [
+      {
+        "name": "q",
+        "required": true,
+        "description": "Keyword file yang ingin dicari"
+      },
+      {
+        "name": "page",
+        "required": false,
+        "description": "Halaman pencarian (default 1)"
+      }
+    ]
+  },
+  {
+    "name": "HappyMod Search",
+    "description": "Mencari aplikasi/game MOD di HappyMod berdasarkan keyword dan menampilkan title, icon, description, info, serta url detail.",
+    "endpoint": "/api/search/happymod",
+    "filename": "happymod",
+    "method": "GET",
+    "params": [
+      {
+        "name": "q",
+        "required": true,
+        "description": "Keyword aplikasi atau game yang ingin dicari"
+      }
+    ]
+  },
+  {
+    "name": "Spotify Search",
+    "endpoint": "/api/search/spotify",
+    "filename": "spotify",
+    "method": "GET",
+    "params": [
+      { "name": "q", "required": true },
+      { "name": "limit", "required": false }
+    ]
+  },
+  {
+    "name": "TikTok Search",
+    "endpoint": "/api/search/tiktok",
+    "filename": "tiktok",
+    "method": "GET",
+    "params": [
+      {
+        "name": "q",
+        "required": true,
+        "description": "Query"
+      }
+    ]
+  },
+  {
+    "name": "Douyin Search",
+    "endpoint": "/api/search/douyinsearch",
+    "filename": "douyinsearch",
+    "method": "GET",
+    "description": "Mencari video di platform Douyin (TikTok China) berdasarkan kata kunci. Mengembalikan informasi lengkap mengenai video (aweme_info).",
+    "params": [
+      {
+        "name": "q",
+        "required": true,
+        "description": "Kata kunci pencarian."
+      }
+    ]
+  },
+  {
+    "name": "Cuaca",
+    "description": "Mendapatkan data perkiraan cuaca untuk suatu lokasi.",
+    "endpoint": "/api/search/cuaca",
+    "filename": "cuaca",
+    "method": "GET",
+    "params": [
+      {
+        "name": "text",
+        "required": true,
+        "description": "Nama lokasi, misal Jakarta"
+      }
+    ]
+  },
+  {
+    "name": "Lyric Search",
+    "endpoint": "/api/search/lyrics",
+    "filename": "lyrics",
+    "method": "GET",
+    "params": [
+      {
+        "name": "q",
+        "required": true,
+        "description": "Judul lagu atau lirik yang ingin dicari"
+      }
+    ]
+  },
+  {  
+    "name": "Pinterest Search",
+    "description": "Mencari gambar di Pinterest berdasarkan query.",
+    "endpoint": "/api/search/pinterest",
+    "filename": "pinterest",
+    "method": "GET",
+    "params": [
+      {
+        "name": "q",
+        "required": true,
+        "description": "Query pencarian"
+      }
+    ]
+  },
+  {
+    "name": "Play Search (Audio Only)",
+    "description": "Mencari YouTube berdasarkan query, mengambil hasil teratas, lalu mengembalikan link download AUDIO (MP3) saja.",
+    "endpoint": "/api/search/play",
+    "filename": "play",
+    "method": "GET",
+    "params": [
+      {
+        "name": "query",
+        "required": true,
+        "description": "Kata kunci pencarian YouTube (contoh: night changes)."
+      }
+    ]
+  },
+  {
+    "name": "GitHub Search",
+    "endpoint": "/api/search/githubsearch",
+    "filename": "githubsearch",
+    "method": "GET",
+    "params": [
+      {
+        "name": "text",
+        "required": true,
+        "description": "Query pencarian repository GitHub"
+      }
+    ]
+  },
+  {
+    "name": "F-Droid Search",
+    "endpoint": "/api/search/fdroid",
+    "filename": "fdroid",
+    "method": "GET",
+    "params": [
+      {
+        "name": "text",
+        "required": true,
+        "description": "Query untuk pencarian aplikasi F-Droid atau URL detail"
+         }
+        ]
+      }
+    ], 
+    "cecan": [
+      {
+        "name": "Cecanamerika",
+        "endpoint": "/api/cecan/cecanamerika",
+        "filename": "cecanamerika",
+        "method": "GET",
+        "description": "cecanamerika endpoint",
+        "params": []
+      },
+      {
+        "name": "Cecanbrazil",
+        "endpoint": "/api/cecan/cecanbrazil",
+        "filename": "cecanbrazil",
+        "method": "GET",
+        "description": "cecanbrazil endpoint",
+        "params": []
+      },
+      {
+        "name": "Cecanindia",
+        "endpoint": "/api/cecan/cecanindia",
+        "filename": "cecanindia",
+        "method": "GET",
+        "description": "cecanindia endpoint",
+        "params": []
+      },
+      {
+        "name": "Cecanitalia",
+        "endpoint": "/api/cecan/cecanitalia",
+        "filename": "cecanitalia",
+        "method": "GET",
+        "description": "cecanitalia endpoint",
+        "params": []
+      },
+      {
+                "name": "Cecanchina",
+        "endpoint": "/api/random/cecanchina",
+        "filename": "cecanchina",
+        "method": "GET",
+        "description": "cecanchina endpoint",
+        "params": []
+      },
+      {
+        "name": "Cecanindo",
+        "endpoint": "/api/random/cecanindo",
+        "filename": "cecanindo",
+        "method": "GET",
+        "description": "cecanindo endpoint",
+        "params": []
+      },
+      {
+        "name": "Cecanjepang",
+        "endpoint": "/api/random/cecanjepang",
+        "filename": "cecanjepang",
+        "method": "GET",
+        "description": "cecanjepang endpoint",
+        "params": []
+      },
+      {
+        "name": "Cecankorea",
+        "endpoint": "/api/random/cecankorea",
+        "filename": "cecankorea",
+        "method": "GET",
+        "description": "cecankorea endpoint",
+        "params": []
+      },
+      {
+        "name": "Cecanthailand",
+        "endpoint": "/api/random/cecanthailand",
+        "filename": "cecanthailand",
+        "method": "GET",
+        "description": "cecanthailand endpoint",
+        "params": []
+      },
+      {
+        "name": "Cecanvietnam",
+        "endpoint": "/api/random/cecanvietnam",
+        "filename": "cecanvietnam",
+        "method": "GET",
+        "description": "cecanvietnam endpoint",
+        "params": []
+      },
+      {     
+        "name": "Cecankolombia",
+        "endpoint": "/api/cecan/cecankolombia",
+        "filename": "cecankolombia",
+        "method": "GET",
+        "description": "cecankolombia endpoint",
+        "params": []
+      },
+      {
+        "name": "Cecanrusia",
+        "endpoint": "/api/cecan/cecanrusia",
+        "filename": "cecanrusia",
+        "method": "GET",
+        "description": "cecanrusia endpoint",
+        "params": []
+      },
+      {
+        "name": "Cecanvenzuela",
+        "endpoint": "/api/cecan/cecanvenzuela",
+        "filename": "cecanvenzuela",
+        "method": "GET",
+        "description": "cecanvenzuela endpoint",
+        "params": []
+      }
+    ],
+    "fun": [
+      {
+        "name": "Cekbadut",
+        "endpoint": "/api/fun/cekbadut",
+        "filename": "cekbadut",
+        "method": "GET",
+        "description": "cekbadut endpoint",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama kamu",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Cekboti",
+        "endpoint": "/api/fun/cekboti",
+        "filename": "cekboti",
+        "method": "GET",
+        "description": "cekboti endpoint",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama kamu",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Cekcantik",
+        "endpoint": "/api/fun/cekcantik",
+        "filename": "cekcantik",
+        "method": "GET",
+        "description": "cekcantik endpoint",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama kamu",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Cekcool",
+        "endpoint": "/api/fun/cekcool",
+        "filename": "cekcool",
+        "method": "GET",
+        "description": "cekcool endpoint",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama kamu",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Cekfemboy",
+        "endpoint": "/api/fun/cekfemboy",
+        "filename": "cekfemboy",
+        "method": "GET",
+        "description": "cekfemboy endpoint",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama kamu",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Cekganteng",
+        "endpoint": "/api/fun/cekganteng",
+        "filename": "cekganteng",
+        "method": "GET",
+        "description": "cekganteng endpoint",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama kamu",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Cekgila",
+        "endpoint": "/api/fun/cekgila",
+        "filename": "cekgila",
+        "method": "GET",
+        "description": "cekgila endpoint",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama kamu",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Cekhalu",
+        "endpoint": "/api/fun/cekhalu",
+        "filename": "cekhalu",
+        "method": "GET",
+        "description": "cekhalu endpoint",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama kamu",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Cekhoki",
+        "endpoint": "/api/fun/cekhoki",
+        "filename": "cekhoki",
+        "method": "GET",
+        "description": "cekhoki endpoint",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama kamu",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Cekidiot",
+        "endpoint": "/api/fun/cekidiot",
+        "filename": "cekidiot",
+        "method": "GET",
+        "description": "cekidiot endpoint",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama kamu",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Cekimut",
+        "endpoint": "/api/fun/cekimut",
+        "filename": "cekimut",
+        "method": "GET",
+        "description": "cekimut endpoint",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama kamu",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Cekkebaikan",
+        "endpoint": "/api/fun/cekkebaikan",
+        "filename": "cekkebaikan",
+        "method": "GET",
+        "description": "cekkebaikan endpoint",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama kamu",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Cekkejahatan",
+        "endpoint": "/api/fun/cekkejahatan",
+        "filename": "cekkejahatan",
+        "method": "GET",
+        "description": "cekkejahatan endpoint",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama kamu",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Cekkeren",
+        "endpoint": "/api/fun/cekkeren",
+        "filename": "cekkeren",
+        "method": "GET",
+        "description": "cekkeren endpoint",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama kamu",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Cekkesehatan",
+        "endpoint": "/api/fun/cekkesehatan",
+        "filename": "cekkesehatan",
+        "method": "GET",
+        "description": "cekkesehatan endpoint",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama kamu",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Cekkhodam",
+        "endpoint": "/api/fun/cekkhodam",
+        "filename": "cekkhodam",
+        "method": "GET",
+        "description": "cekkhodam endpoint",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama kamu",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Cekmager",
+        "endpoint": "/api/fun/cekmager",
+        "filename": "cekmager",
+        "method": "GET",
+        "description": "cekmager endpoint",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama kamu",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Cekmental",
+        "endpoint": "/api/fun/cekmental",
+        "filename": "cekmental",
+        "method": "GET",
+        "description": "cekmental endpoint",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama kamu",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Ceknolep",
+        "endpoint": "/api/fun/ceknolep",
+        "filename": "ceknolep",
+        "method": "GET",
+        "description": "ceknolep endpoint",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama kamu",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Cekpinter",
+        "endpoint": "/api/fun/cekpinter",
+        "filename": "cekpinter",
+        "method": "GET",
+        "description": "cekpinter endpoint",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama kamu",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Ceksifat",
+        "endpoint": "/api/fun/ceksifat",
+        "filename": "ceksifat",
+        "method": "GET",
+        "description": "ceksifat endpoint",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama kamu",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Cektoxic",
+        "endpoint": "/api/fun/cektoxic",
+        "filename": "cektoxic",
+        "method": "GET",
+        "description": "cektoxic endpoint",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama kamu",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Cekwibu",
+        "endpoint": "/api/fun/cekwibu",
+        "filename": "cekwibu",
+        "method": "GET",
+        "description": "cekwibu endpoint",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama kamu",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Roasting",
+        "endpoint": "/api/fun/roasting",
+        "filename": "roasting",
+        "method": "GET",
+        "description": "roasting endpoint",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama target roasting",
+            "required": true
+          }
+        ]
+      }
+    ],
+    "ai": [
+      {
+    "name": "ChatHub AI",
+    "endpoint": "/api/ai/chathub",
+    "filename": "chathub",
+    "method": "GET",
+    "params": [
+      {
+        "name": "q",
+        "required": true
+      }
+    ]
+  },
+  {
+  "name": "DeepSeek AI",
+  "endpoint": "/api/ai/deepseek",
+  "filename": "deepseek",
+  "method": "GET",
+  "params": [
+    {
+      "name": "q",
+      "required": true,
+      "description": "Pertanyaan atau pesan untuk AI DeepSeek"}
+      ]
+      },
+      {
+     "name": "Gpt Chat",
+    "endpoint": "/api/ai/gpt",
+    "filename": "gpt",
+    "method": "GET",
+    "params": [
+      {
+        "name": "q",
+        "required": true,
+        "description": "Pesan atau pertanyaan untuk AI"
+      }
+    ]
+  },
+  {   
+    "name": "DolphinAI",
+    "endpoint": "/api/ai/DolphinAI",
+    "filename": "Dolphinai",
+    "method": "GET",
+    "params": [
+      { "name": "q", "required": true },
+      { "name": "template", "required": false }
+    ]
+  },
+  {
+        "name": "Muslim AI",
+        "endpoint": "/api/ai/muslimai",
+        "filename": "muslimai",
+        "method": "GET",
+        "params": [
+          {
+            "name": "q",
+            "required": true,
+            "description": "Pertanyaan mengenai Islam atau Al-Quran"     
+          }
+        ]
+      },
+      {        
+        "name": "Website Generator",
+        "endpoint": "/api/ai/genweb",
+        "filename": "genweb",
+        "method": "GET",
+        "params": [
+          {
+            "name": "text",
+            "required": true
+          }
+          ]
+          },
+          {     
+    "name": "BibleAI Search",
+    "endpoint": "/api/ai/bibleai",
+    "filename": "bibleai",
+    "method": "GET",
+    "params": [
+      {
+        "name": "q",
+        "required": true,
+        "description": "Pertanyaan untuk BibleAI"  
+     }
+     ]
+     },
+     {
+          "name": "BypassAI Writecream",
+    "endpoint": "/api/ai/bypassai",
+    "filename": "bypassai",
+    "method": "GET",
+    "params": [
+      {
+        "name": "text",
+        "required": true,
+        "description": "Teks yang akan di-bypass AI detection"   
+      }
+    ]
+  },
+  {
+     "name": "Grok Chat",
+    "endpoint": "/api/ai/grok",
+    "filename": "grok",
+    "method": "GET",
+    "description": "Chat AI menggunakan Toolbaz (model toolbaz-v4.5-fast)",
+    "params": [
+      {
+        "name": "q",
+        "type": "string",
+        "required": true,
+        "description": "Pesan atau pertanyaan yang dikirim ke AI"
+      }
+    ]
+  },
+  {
+        "name": "Gita AI",
+        "endpoint": "/api/ai/gita",
+        "filename": "gita",
+        "method": "GET",
+        "params": [
+          {
+            "name": "q",
+            "required": true,
+            "description": "Pertanyaan yang ingin diajukan ke Gita AI"   
+          }
+        ]
+      },
+      {               
+    "name": "Esp Chat",
+    "endpoint": "/api/ai/esp",
+    "filename": "esp",
+    "method": "GET",
+    "description": "Chat AI menggunakan ChatEspañol AI Gratis (WordPress AJAX)",
+    "params": [
+      {
+        "name": "q",
+        "type": "string",
+        "required": true,
+        "description": "Pesan atau pertanyaan yang dikirim ke AI"}    
+        ]
+        },
+        {  
+        "name": "Copilot AI",
+        "endpoint": "/api/ai/copilot",
+        "filename": "Copilot",
+        "method": "GET",
+        "params": [
+          {
+            "name": "q",
+            "required": true
+          },
+          {
+            "name": "session",
+            "required": false   
+          }
+        ]
+      },
+      {
+    "name": "Text2Pet AI - Image",
+    "endpoint": "/api/ai/petimg",
+    "filename": "petimg",
+    "method": "GET",
+    "params": [
+      {
+        "name": "prompt",
+        "required": true,
+        "description": "Prompt untuk generate image"
+      }
+    ]
+  },
+  {
+    "name": "PublicAI",
+    "endpoint": "/api/ai/publicai",
+    "filename": "publicai",
+    "method": "GET",
+    "params": [
+      {
+        "name": "q",
+        "required": true
+      }
+    ]
+  },
+  {
+  "name": "HeckAI",
+  "endpoint": "/api/ai/heckai",
+  "filename": "heckai",
+  "method": "GET",
+  "params": [
+    {
+      "name": "text",
+      "required": true,
+      "description": "Teks pertanyaan untuk HeckAI"}
+      ]
+      },
+      {
+    "name": "Scite AI Research",
+    "endpoint": "/api/ai/scite",
+    "filename": "scite",
+    "method": "GET",
+    "params": [
+      {
+        "name": "q",
+        "required": true
+      }
+    ]
+  },
+  {
+      "name": "Claude Chat",
+  "endpoint": "/api/ai/claude",
+  "filename": "claude",
+  "method": "GET",
+  "params": [
+    {
+      "name": "text",
+      "required": true,
+      "description": "Pertanyaan atau teks yang ingin dikirim ke Claude AI"} 
+      ]
+      },
+      {
+    "name": "SeaArt AI Chat",
+    "endpoint": "/api/ai/seaart",
+    "filename": "seaart",
+    "method": "GET",
+    "params": [
+      {
+        "name": "q",
+        "required": true
+      },
+      {
+        "name": "text",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "TalkAI",
+    "endpoint": "/api/ai/talkai",
+    "filename": "talkai",
+    "method": "GET",
+    "params": [
+      {
+        "name": "q",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "turboseek",
+    "endpoint": "/api/ai/turboseek",
+    "filename": "turboseek",
+    "method": "GET",
+    "params": [
+      {
+        "name": "q",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "Venice AI Chat",
+    "endpoint": "/api/ai/venice",
+    "filename": "venice",
+    "method": "GET",
+    "params": [
+      {
+        "name": "q",
+        "required": true
+           }
+        ]
+      }
+    ],
+    "Downloader": [
+    {
+      "name": "TikTok Downloader",
+      "endpoint": "/api/downloader/tiktokdl",
+      "filename": "tiktokdl",
+      "method": "GET",
+      "params": [
+        { "name": "q", "required": true }
+      ]
+    },
+    {
+      "name": "SnackVideo Downloader",
+      "endpoint": "/api/downloader/snackvideodl",
+      "filename": "snackvideodl",
+      "method": "GET",
+      "params": [
+        { "name": "q", "required": true }
+      ]
+    },
+    {
+  "name": "Google Drive Downloader",
+  "endpoint": "/api/downloader/gdrivedl",
+  "filename": "gdrivedl",
+  "method": "GET",
+  "params": [
+    {
+      "name": "q",
+      "required": true}
+      ]
+      },
+      {
+      "name": "Terabox Downloader",
+      "endpoint": "/api/downloader/teraboxdl",
+      "filename": "teraboxdl",
+      "method": "GET",
+      "params": [
+        { "name": "q", "required": true }
+      ]
+    },
+    {
+      "name": "Spotify Downloader / Search",
+      "endpoint": "/api/downloader/spotifydl",
+      "filename": "spotifydl",
+      "method": "GET",
+      "params": [
+        { "name": "q", "required": true }
+      ]
+    },
+    {
+      "name": "GitHub Repository Downloader",
+      "endpoint": "/api/downloader/githubdl",
+      "filename": "githubdl",
+      "method": "GET",
+      "params": [
+        { "name": "q", "required": true  }
+        ]
+      }
+    ],                
+    "maker": [
+      {
+        "name": "Afinitasml",
+        "endpoint": "/api/maker/afinitasml",
+        "filename": "afinitasml",
+        "method": "GET",
+        "description": "afinitasml endpoint",
+        "params": [
+          {
+            "name": "image",
+            "description": "URL gambar profil",
+            "required": true
+          },
+          {
+            "name": "bg",
+            "description": "Nomor background 1-6",
+            "required": false
+          }
+        ]
+      },
+      {
+  "name": "FakeGroup",
+  "endpoint": "/api/maker/fakegroup",
+  "filename": "fakegroup",
+  "method": "GET",
+  "description": "Generator fake WhatsApp group info",
+  "params": [
+    {
+      "name": "image",
+      "description": "URL gambar profil grup",
+      "required": true
+    },
+    {
+      "name": "name",
+      "description": "Nama grup",
+      "required": false
+    },
+    {
+      "name": "members",
+      "description": "Jumlah anggota",
+      "required": false
+    },
+    {
+      "name": "desc",
+      "description": "Deskripsi grup",
+      "required": false
+    },
+    {
+      "name": "date",
+      "description": "Tanggal dibuat",
+      "required": false}
+      ]
+      },
+      {
+  "name": "FakeChannel2",
+  "endpoint": "/api/maker/fakech2",
+  "filename": "fakech2",
+  "method": "GET",
+  "description": "Generator fake channel analytics",
+  "params": [
+    {
+      "name": "image",
+      "description": "URL gambar untuk foto profil",
+      "required": true
+    },
+    {
+      "name": "name",
+      "description": "Nama channel",
+      "required": false
+    },
+    {
+      "name": "followers",
+      "description": "Jumlah pengikut",
+      "required": false
+    },
+    {
+      "name": "desc",
+      "description": "Deskripsi channel",
+      "required": false
+    },
+    {
+      "name": "date",
+      "description": "Tanggal dibuat",
+      "required": false
+    },
+    {
+      "name": "reach",
+      "description": "Akun dijangkau",
+      "required": false
+    },
+    {
+      "name": "clean",
+      "description": "Pengikut bersih",
+      "required": false}
+      ]
+      },
+      { 
+      "name": "FakeGroup2",
+      "endpoint": "/api/maker/fakegroup2",
+      "filename": "fakegroup2",
+      "method": "GET",
+      "params": [
+        { "name": "image", "example": "https://i.imgur.com/a.jpg", "required": true },
+        { "name": "name", "example": "Area Developer", "required": true },
+        { "name": "members", "example": "999", "required": false }
+        ]
+        },
+        {  
+      "name": "FakeTelegram",
+      "endpoint": "/api/maker/faketelegram",
+      "filename": "faketelegram",
+      "method": "GET",
+      "params": [
+        { "name": "image", "example": "https://i.imgur.com/a.jpg", "required": true },
+        { "name": "name", "example": "Riyan Hidayah", "required": true },
+        { "name": "number", "example": "+62 813 xxxx", "required": false },
+        { "name": "bio", "example": "yh", "required": false },
+        { "name": "username", "example": "@ryanzzhdyah", "required": false }
+        ] 
+    },
+    {
+  "name": "Fakedana",
+  "endpoint": "/api/maker/fakedana",
+  "filename": "fakedana",
+  "method": "GET",
+  "description": "Generate gambar uang fiktif dengan angka tertentu",
+  "params": [
+    {
+      "name": "text",
+      "description": "Jumlah angka yang ingin ditampilkan, misal 10000",
+      "required": true}
+      ]
+      },
+      { 
+    "name": "Brat Menhera",
+    "endpoint": "/api/maker/bratmenhera",
+    "filename": "bratmenhera",
+    "method": "GET",
+    "description": "Generate sticker brat style menhera",
+    "params": [
+      {
+        "name": "text",
+        "description": "Teks yang mau ditulis",
+        "required": true
+      }
+    ]
+  },
+  {
+  "name": "Brat Anime",
+    "endpoint": "/api/maker/bratanime",
+    "filename": "bratanime",
+    "method": "GET",
+    "description": "Generate sticker brat style Anime",
+    "params": [
+      {
+        "name": "text",
+        "description": "Teks yang mau ditulis",
+        "required": true
+      }
+    ]
+  },
+  {
+  "name": "Chat Bubble Maker",
+  "endpoint": "/api/maker/bubble",
+  "method": "GET",
+  "description": "Generate chat bubble image",
+  "params": [
+    {
+      "name": "name",
+      "description": "Nama pengirim",
+      "required": true
+    },
+    {
+      "name": "message",
+      "description": "Isi pesan dalam bubble",
+      "required": true
+    },
+    {
+      "name": "color",
+      "description": "Warna bubble (hex atau gradient dipisah koma)",
+      "required": false
+    },
+    {
+      "name": "profile",
+      "description": "URL gambar profile",
+      "required": false}
+      ]
+      },
+      {
+    "name": "Brat Nezuko",
+    "endpoint": "/api/maker/bratnezuko",
+    "filename": "bratnezuko",
+    "method": "GET",
+    "description": "Generate sticker brat style Nezuko",
+    "params": [
+      {
+        "name": "text",
+        "description": "Teks yang mau ditulis",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "Brat Patrick",
+    "endpoint": "/api/maker/bratpatrick",
+    "filename": "bratpatrick",
+    "method": "GET",
+    "description": "Generate sticker brat style Patrick",
+    "params": [
+      {
+        "name": "text",
+        "description": "Teks yang mau ditulis",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "Brat Qiqi",
+    "endpoint": "/api/maker/bratqiqi",
+    "filename": "bratqiqi",
+    "method": "GET",
+    "description": "Generate sticker brat style Qiqi",
+    "params": [
+      {
+        "name": "text",
+        "description": "Teks yang mau ditulis",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "Brat Ruromiya",
+    "endpoint": "/api/maker/bratruromiya",
+    "filename": "bratruromiya",
+    "method": "GET",
+    "description": "Generate sticker brat style Ruromiya",
+    "params": [
+      {
+        "name": "text",
+        "description": "Teks yang mau ditulis",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "Brat Squidward",
+    "endpoint": "/api/maker/bratsquidward",
+    "filename": "bratsquidward",
+    "method": "GET",
+    "description": "Generate sticker brat style Squidward",
+    "params": [
+      {
+        "name": "text",
+        "description": "Teks yang mau ditulis",
+        "required": true}
+        ]
+        },
+        {  
+      "name": "Bratanime2",
+      "endpoint": "/api/maker/bratanime2",
+      "filename": "bratanime2",
+      "method": "GET",
+      "description": "Generate brat anime style sticker",
+      "params": [
+        {
+          "name": "text",
+          "description": "Teks yang akan ditampilkan",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Bratbahlil",
+      "endpoint": "/api/maker/bratbahlil",
+      "filename": "bratbahlil",
+      "method": "GET",
+      "description": "Generate brat style sticker bahlil",
+      "params": [
+        {
+          "name": "text",
+          "description": "Teks yang akan ditampilkan",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Bratcewe2",
+      "endpoint": "/api/maker/bratcewe2",
+      "filename": "bratcewe2",
+      "method": "GET",
+      "description": "Generate brat style cewe",
+      "params": [
+        {
+          "name": "text",
+          "description": "Teks yang akan ditampilkan",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Bratchika",
+      "endpoint": "/api/maker/bratchika",
+      "filename": "bratchika",
+      "method": "GET",
+      "description": "Generate brat chika style sticker",
+      "params": [
+        {
+          "name": "text",
+          "description": "Teks yang akan ditampilkan",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Bratgura",
+      "endpoint": "/api/maker/bratgura",
+      "filename": "bratgura",
+      "method": "GET",
+      "description": "Generate brat gura style sticker",
+      "params": [
+        {
+          "name": "text",
+          "description": "Teks yang akan ditampilkan",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Bratkobato",
+      "endpoint": "/api/maker/bratkobato",
+      "filename": "bratkobato",
+      "method": "GET",
+      "description": "Generate brat kobato style sticker",
+      "params": [
+        {
+          "name": "text",
+          "description": "Teks yang akan ditampilkan",
+          "required": true}
+          ]
+          },
+          {
+  "name": "Gura Meme",
+  "endpoint": "/api/maker/gura",
+  "filename": "gura",
+  "method": "GET",
+  "description": "Generate meme Gura dengan gambar pengguna menggunakan background template",
+  "params": [
+    {
+      "name": "image",
+      "description": "URL gambar yang ingin dimasukkan ke template",
+      "required": true}
+      ]
+      },
+      {
+        "name": "Ship Love",
+        "endpoint": "/api/maker/ship",
+        "filename": "ship",
+        "method": "GET",
+        "description": "Generate gambar ship love dengan dua avatar dan persentase kecocokan",
+        "params": [
+          {
+            "name": "avatar1",
+            "description": "URL avatar pertama",
+            "required": true
+          },
+          {
+            "name": "avatar2",
+            "description": "URL avatar kedua",
+            "required": true
+          },
+          {
+            "name": "background",
+            "description": "URL background gambar",
+            "required": true
+          },
+          {
+            "name": "persen",
+            "description": "Persentase kecocokan (0-100)",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Sticker Roast",
+        "endpoint": "/api/maker/sroast",
+        "filename": "sroast",
+        "method": "GET",
+        "description": "Generate sticker roast dengan tiga teks (atas, tengah, bawah)",
+        "params": [
+          {
+            "name": "text",
+            "description": "Format teks: t1|t2|t3",
+            "required": true
+          }
+        ]
+      },
+      {
+    "name": "Welcome Card V1",
+    "endpoint": "/api/maker/welcomev1",
+    "filename": "welcomev1",
+    "method": "GET",
+    "description": "Generate kartu welcome member server",
+    "params": [
+      {
+        "name": "username",
+        "description": "Nama pengguna yang bergabung",
+        "required": true
+      },
+      {
+        "name": "guildName",
+        "description": "Nama server / guild",
+        "required": true
+      },
+      {
+        "name": "guildIcon",
+        "description": "URL icon server",
+        "required": true
+      },
+      {
+        "name": "memberCount",
+        "description": "Jumlah member server",
+        "required": true
+      },
+      {
+        "name": "avatar",
+        "description": "URL avatar pengguna",
+        "required": true
+      },
+      {
+        "name": "background",
+        "description": "URL background gambar",
+        "required": true
+      },
+      {
+        "name": "quality",
+        "description": "Kualitas gambar (1-100)",
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "Welcome Card V2",
+    "endpoint": "/api/maker/welcomev2",
+    "filename": "welcomev2",
+    "method": "GET",
+    "description": "Generate kartu welcome member server versi 2",
+    "params": [
+      {
+        "name": "username",
+        "description": "Nama pengguna yang bergabung",
+        "required": true
+      },
+      {
+        "name": "guildName",
+        "description": "Nama server / guild",
+        "required": true
+      },
+      {
+        "name": "guildIcon",
+        "description": "URL icon server",
+        "required": true
+      },
+      {
+        "name": "memberCount",
+        "description": "Jumlah member server",
+        "required": true
+      },
+      {
+        "name": "avatar",
+        "description": "URL avatar pengguna",
+        "required": true
+      },
+      {
+        "name": "background",
+        "description": "URL background gambar",
+        "required": true
+      },
+      {
+        "name": "quality",
+        "description": "Kualitas gambar (1-100)",
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "Welcome Card V3",
+    "endpoint": "/api/maker/welcomev3",
+    "filename": "welcomev3",
+    "method": "GET",
+    "description": "Generate kartu welcome member server versi 3",
+    "params": [
+      {
+        "name": "username",
+        "description": "Nama pengguna yang bergabung",
+        "required": true
+      },
+      {
+        "name": "guildName",
+        "description": "Nama server / guild",
+        "required": true
+      },
+      {
+        "name": "guildIcon",
+        "description": "URL icon server",
+        "required": true
+      },
+      {
+        "name": "memberCount",
+        "description": "Jumlah member server",
+        "required": true
+      },
+      {
+        "name": "avatar",
+        "description": "URL avatar pengguna",
+        "required": true
+      },
+      {
+        "name": "background",
+        "description": "URL background gambar",
+        "required": true
+      },
+      {
+        "name": "quality",
+        "description": "Kualitas gambar (1-100)",
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "Welcome Card V4",
+    "endpoint": "/api/maker/welcomev4",
+    "filename": "welcomev4",
+    "method": "GET",
+    "description": "Generate kartu welcome menggunakan canvafy",
+    "params": [
+      {
+        "name": "avatar",
+        "description": "URL avatar pengguna",
+        "required": true
+      },
+      {
+        "name": "background",
+        "description": "URL background gambar",
+        "required": true
+      },
+      {
+        "name": "description",
+        "description": "Teks welcome",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "Welcome Card V5",
+    "endpoint": "/api/maker/welcomev5",
+    "filename": "welcomev5",
+    "method": "GET",
+    "description": "Generate kartu welcome custom canvas",
+    "params": [
+      {
+        "name": "username",
+        "description": "Nama pengguna yang bergabung",
+        "required": true
+      },
+      {
+        "name": "guildName",
+        "description": "Nama server / guild",
+        "required": true
+      },
+      {
+        "name": "memberCount",
+        "description": "Jumlah member server",
+        "required": true
+      },
+      {
+        "name": "avatar",
+        "description": "URL avatar pengguna",
+        "required": true
+      },
+      {
+        "name": "background",
+        "description": "URL background gambar",
+        "required": true
+      },
+      {
+        "name": "quality",
+        "description": "Kualitas gambar (1-100)",
+        "required": false}
+        ]
+        },
+        {
+        "name": "ML Winner Certificate",
+        "endpoint": "/api/maker/juaraml",
+        "filename": "juaraml",
+        "method": "GET",
+        "description": "Generate gambar sertifikat ML Winner dengan nama pengguna",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama yang akan ditampilkan pada sertifikat (maksimal 50 karakter)",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "KT Quote",
+        "endpoint": "/api/maker/kt",
+        "filename": "kt",
+        "method": "GET",
+        "description": "Generate gambar quote dengan avatar dan nama samping",
+        "params": [
+          {
+            "name": "image",
+            "description": "URL gambar avatar",
+            "required": true
+          },
+          {
+            "name": "text",
+            "description": "Format teks: Nama|Quote",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Level Up Card",
+        "endpoint": "/api/maker/levelup",
+        "filename": "levelup",
+        "method": "GET",
+        "description": "Generate kartu level up dengan avatar dan perubahan level",
+        "params": [
+          {
+            "name": "backgroundURL",
+            "description": "URL gambar background",
+            "required": true
+          },
+          {
+            "name": "avatarURL",
+            "description": "URL avatar pengguna",
+            "required": true
+          },
+          {
+            "name": "fromLevel",
+            "description": "Level sebelumnya",
+            "required": true
+          },
+          {
+            "name": "toLevel",
+            "description": "Level setelah naik",
+            "required": true
+          },
+          {
+            "name": "name",
+            "description": "Nama pengguna",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Goodbye Card",
+        "endpoint": "/api/maker/goodbyev1",
+        "filename": "goodbyev1",
+        "method": "GET",
+        "description": "Generate kartu goodbye member server",
+        "params": [
+          {
+            "name": "username",
+            "description": "Nama pengguna yang keluar",
+            "required": true
+          },
+          {
+            "name": "guildName",
+            "description": "Nama server / guild",
+            "required": true
+          },
+          {
+            "name": "guildIcon",
+            "description": "URL icon server",
+            "required": true
+          },
+          {
+            "name": "memberCount",
+            "description": "Jumlah member server",
+            "required": true
+          },
+          {
+            "name": "avatar",
+            "description": "URL avatar pengguna",
+            "required": true
+          },
+          {
+            "name": "background",
+            "description": "URL background gambar",
+            "required": true
+          },
+          {
+            "name": "quality",
+            "description": "Kualitas gambar (1-100)",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Goodbye Card V2",
+        "endpoint": "/api/maker/goodbyev2",
+        "filename": "goodbyev2",
+        "method": "GET",
+        "description": "Generate kartu goodbye menggunakan library canvafy",
+        "params": [
+          {
+            "name": "avatar",
+            "description": "URL avatar pengguna",
+            "required": true
+          },
+          {
+            "name": "background",
+            "description": "URL background gambar",
+            "required": true
+          },
+          {
+            "name": "description",
+            "description": "Teks deskripsi goodbye",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "eKTP Generator",
+        "endpoint": "/api/maker/ektp",
+        "filename": "ektp",
+        "method": "GET",
+        "description": "generate fake e-KTP image",
+        "params": [
+          {
+            "name": "nik",
+            "description": "nomor NIK",
+            "required": true
+          },
+          {
+            "name": "nama",
+            "description": "nama lengkap",
+            "required": true
+          },
+          {
+            "name": "pas_photo",
+            "description": "url foto pas",
+            "required": true
+          },
+          {
+            "name": "provinsi",
+            "description": "nama provinsi",
+            "required": false
+          },
+          {
+            "name": "kota",
+            "description": "nama kota/kabupaten",
+            "required": false
+          },
+          {
+            "name": "ttl",
+            "description": "tempat tanggal lahir",
+            "required": false
+          },
+          {
+            "name": "jenis_kelamin",
+            "description": "jenis kelamin",
+            "required": false
+          },
+          {
+            "name": "golongan_darah",
+            "description": "golongan darah",
+            "required": false
+          },
+          {
+            "name": "alamat",
+            "description": "alamat",
+            "required": false
+          },
+          {
+            "name": "rt/rw",
+            "description": "RT/RW",
+            "required": false
+          },
+          {
+            "name": "kel/desa",
+            "description": "kelurahan atau desa",
+            "required": false
+          },
+          {
+            "name": "kecamatan",
+            "description": "kecamatan",
+            "required": false
+          },
+          {
+            "name": "agama",
+            "description": "agama",
+            "required": false
+          },
+          {
+            "name": "status",
+            "description": "status perkawinan",
+            "required": false
+          },
+          {
+            "name": "pekerjaan",
+            "description": "pekerjaan",
+            "required": false
+          },
+          {
+            "name": "kewarganegaraan",
+            "description": "kewarganegaraan",
+            "required": false
+          },
+          {
+            "name": "masa_berlaku",
+            "description": "masa berlaku KTP",
+            "required": false
+          },
+          {
+            "name": "terbuat",
+            "description": "tanggal pembuatan",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Beautiful",
+        "endpoint": "/api/maker/beautiful",
+        "filename": "beautiful",
+        "method": "GET",
+        "description": "generate beautiful meme image",
+        "params": [
+          {
+            "name": "image",
+            "description": "url gambar",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Afinitasml2",
+        "endpoint": "/api/maker/afinitasml2",
+        "filename": "afinitasml2",
+        "method": "GET",
+        "description": "afinitasml2 endpoint",
+        "params": [
+          {
+            "name": "image",
+            "description": "URL gambar profil",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Fakeff",
+        "endpoint": "/api/maker/fakeff",
+        "filename": "fakeff",
+        "method": "GET",
+        "description": "fakeff endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "Nama pemain",
+            "required": true
+          },
+          {
+            "name": "bg",
+            "description": "Nomor background 1-60",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Fakeml",
+        "endpoint": "/api/maker/fakeml",
+        "filename": "fakeml",
+        "method": "GET",
+        "description": "fakeml endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "Nama hero",
+            "required": true
+          },
+          {
+            "name": "image",
+            "description": "URL gambar hero",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Nulis",
+        "endpoint": "/api/maker/nulis",
+        "filename": "nulis",
+        "method": "GET",
+        "description": "nulis endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "Teks yang ingin ditulis",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Angelnick",
+        "endpoint": "/api/maker/angelnick",
+        "filename": "angelnick",
+        "method": "GET",
+        "description": "angelnick endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          },
+          {
+            "name": "image",
+            "description": "image",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Artemis",
+        "endpoint": "/api/maker/artemis",
+        "filename": "artemis",
+        "method": "GET",
+        "description": "artemis endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Balogo",
+        "endpoint": "/api/maker/balogo",
+        "filename": "balogo",
+        "method": "GET",
+        "description": "balogo endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Basket",
+        "endpoint": "/api/maker/basket",
+        "filename": "basket",
+        "method": "GET",
+        "description": "basket endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Blur",
+        "endpoint": "/api/maker/blur",
+        "filename": "blur",
+        "method": "GET",
+        "description": "blur endpoint",
+        "params": [
+          {
+            "name": "image",
+            "description": "image",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Branding",
+        "endpoint": "/api/maker/branding",
+        "filename": "branding",
+        "method": "GET",
+        "description": "branding endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Brat",
+        "endpoint": "/api/maker/brat",
+        "filename": "brat",
+        "method": "GET",
+        "description": "brat endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Bratvid",
+        "endpoint": "/api/maker/bratvid",
+        "filename": "bratvid",
+        "method": "GET",
+        "description": "bratvid endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          },
+          {
+            "name": "delay",
+            "description": "delay",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "FakeDev",
+        "endpoint": "/api/maker/fakedev",
+        "filename": "fakedev",
+        "method": "GET",
+        "description": "generate fake developer image",
+        "params": [
+          {
+            "name": "text",
+            "description": "nama developer",
+            "required": true
+          },
+          {
+            "name": "image",
+            "description": "url gambar",
+            "required": true
+          },
+          {
+            "name": "verified",
+            "description": "status true/false",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Pornhub",
+        "endpoint": "/api/maker/pornhub",
+        "filename": "pornhub",
+        "method": "GET",
+        "description": "generate pornhub style logo",
+        "params": [
+          {
+            "name": "text1",
+            "description": "teks kiri",
+            "required": true
+          },
+          {
+            "name": "text2",
+            "description": "teks kanan",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Bree",
+        "endpoint": "/api/maker/bree",
+        "filename": "bree",
+        "method": "GET",
+        "description": "generate image with two separate texts",
+        "params": [
+          {
+            "name": "text1",
+            "description": "teks atas",
+            "required": true
+          },
+          {
+            "name": "text2",
+            "description": "teks bawah",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Cbadminton",
+        "endpoint": "/api/maker/cbadminton",
+        "filename": "cbadminton",
+        "method": "GET",
+        "description": "cbadminton endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Circle",
+        "endpoint": "/api/maker/circle",
+        "filename": "circle",
+        "method": "GET",
+        "description": "circle endpoint",
+        "params": [
+          {
+            "name": "image",
+            "description": "image",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Codesnap",
+        "endpoint": "/api/maker/codesnap",
+        "filename": "codesnap",
+        "method": "GET",
+        "description": "codesnap endpoint",
+        "params": [
+          {
+            "name": "code",
+            "description": "code",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Cyberspider",
+        "endpoint": "/api/maker/cyberspider",
+        "filename": "cyberspider",
+        "method": "GET",
+        "description": "cyberspider endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          },
+          {
+            "name": "image",
+            "description": "image",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Darkangel",
+        "endpoint": "/api/maker/darkangel",
+        "filename": "darkangel",
+        "method": "GET",
+        "description": "darkangel endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          },
+          {
+            "name": "image",
+            "description": "image",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Darkness",
+        "endpoint": "/api/maker/darkness",
+        "filename": "darkness",
+        "method": "GET",
+        "description": "darkness endpoint",
+        "params": [
+          {
+            "name": "image",
+            "description": "image",
+            "required": true
+          },
+          {
+            "name": "amount",
+            "description": "amount",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Dymc",
+        "endpoint": "/api/maker/dymc",
+        "filename": "dymc",
+        "method": "GET",
+        "description": "dymc endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          },
+          {
+            "name": "image",
+            "description": "image",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Emojimix",
+        "endpoint": "/api/maker/emojimix",
+        "filename": "emojimix",
+        "method": "GET",
+        "description": "emojimix endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Ephoto",
+        "endpoint": "/api/maker/ephoto",
+        "filename": "ephoto",
+        "method": "GET",
+        "description": "ephoto endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Ephoto2",
+        "endpoint": "/api/maker/ephoto2",
+        "filename": "ephoto2",
+        "method": "GET",
+        "description": "ephoto2 endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Ephoto3",
+        "endpoint": "/api/maker/ephoto3",
+        "filename": "ephoto3",
+        "method": "GET",
+        "description": "ephoto3 endpoint",
+        "params": [
+          {
+            "name": "q",
+            "description": "q",
+            "required": true
+          },
+          {
+            "name": "style",
+            "description": "style",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Facepalm",
+        "endpoint": "/api/maker/facepalm",
+        "filename": "facepalm",
+        "method": "GET",
+        "description": "facepalm endpoint",
+        "params": [
+          {
+            "name": "image",
+            "description": "image",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "FakeXNXX",
+        "endpoint": "/api/maker/fake-xnxx",
+        "filename": "fake-xnxx",
+        "method": "GET",
+        "description": "Generate fake XNXX comment image",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama pengguna",
+            "required": true
+          },
+          {
+            "name": "quote",
+            "description": "Isi komentar",
+            "required": true
+          },
+          {
+            "name": "likes",
+            "description": "Jumlah like",
+            "required": false
+          },
+          {
+            "name": "dislikes",
+            "description": "Jumlah dislike",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Fakecall",
+        "endpoint": "/api/maker/fakecall",
+        "filename": "fakecall",
+        "method": "GET",
+        "description": "fakecall endpoint",
+        "params": [
+          {
+            "name": "nama",
+            "description": "nama",
+            "required": true
+          },
+          {
+            "name": "waktu",
+            "description": "waktu",
+            "required": true
+          },
+          {
+            "name": "image",
+            "description": "image",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Fakecall2",
+        "endpoint": "/api/maker/fakecall2",
+        "filename": "fakecall2",
+        "method": "GET",
+        "description": "fakecall2 endpoint",
+        "params": [
+          {
+            "name": "nama",
+            "description": "nama",
+            "required": true
+          },
+          {
+            "name": "waktu",
+            "description": "waktu",
+            "required": true
+          },
+          {
+            "name": "image",
+            "description": "image",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Fakedev2",
+        "endpoint": "/api/maker/fakedev2",
+        "filename": "fakedev2",
+        "method": "GET",
+        "description": "Generate gambar profil dengan teks melingkar",
+        "params": [
+          {
+            "name": "url",
+            "description": "Link gambar avatar",
+            "required": true
+          },
+          {
+            "name": "text",
+            "description": "Teks yang akan ditampilkan melingkar",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Fakedev3",
+        "endpoint": "/api/maker/fakedev3",
+        "filename": "fakedev3",
+        "method": "GET",
+        "description": "fakedev3 endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          },
+          {
+            "name": "verified",
+            "description": "verified",
+            "required": true
+          },
+          {
+            "name": "image",
+            "description": "image",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Fakeff2",
+        "endpoint": "/api/maker/fakeff2",
+        "filename": "fakeff2",
+        "method": "GET",
+        "description": "fakeff2 endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          },
+          {
+            "name": "bg",
+            "description": "bg",
+            "required": true
+          }
+        ]
+      },
+      {
+  "name": "Fake FF Duo Lobby",
+  "endpoint": "/api/maker/fakeffduo",
+  "filename": "fakeffduo",
+  "method": "GET",
+  "params": [
+    {
+      "name": "name1",
+      "required": true
+    },
+    {
+      "name": "name2",
+      "required": true
+    },
+    {
+      "name": "bg",
+      "required": false}
+      ]
+      },
+      {
+        "name": "Fakeffduo2",
+        "endpoint": "/api/maker/fakeffduo2",
+        "filename": "fakeffduo2",
+        "method": "GET",
+        "description": "fakeffduo endpoint",
+        "params": [
+          {
+            "name": "name1",
+            "description": "name1",
+            "required": true
+          },
+          {
+            "name": "name2",
+            "description": "name2",
+            "required": true
+          },
+          {
+            "name": "bg",
+            "description": "bg",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Fakeigstory",
+        "endpoint": "/api/maker/fakeigstory",
+        "filename": "fakeigstory",
+        "method": "GET",
+        "description": "fakeigstory endpoint",
+        "params": [
+          {
+            "name": "nama",
+            "description": "nama",
+            "required": true
+          },
+          {
+            "name": "image",
+            "description": "image",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Fakeml2",
+        "endpoint": "/api/maker/fakeml2",
+        "filename": "fakeml2",
+        "method": "GET",
+        "description": "fakeml2 endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          },
+          {
+            "name": "image",
+            "description": "image",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Fakengl",
+        "endpoint": "/api/maker/fakengl",
+        "filename": "fakengl",
+        "method": "GET",
+        "description": "fakengl endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Fake TikTok Profile",
+        "endpoint": "/api/maker/faketiktok",
+        "filename": "faketiktok",
+        "method": "GET",
+        "description": "Generate gambar profil TikTok palsu",
+        "params": [
+          {
+            "name": "nama",
+            "description": "Nama akun TikTok",
+            "required": true
+          },
+          {
+            "name": "username",
+            "description": "Username TikTok tanpa @",
+            "required": true
+          },
+          {
+            "name": "verified",
+            "description": "Status centang biru (true / false)",
+            "required": true
+          },
+          {
+            "name": "mengikuti",
+            "description": "Jumlah mengikuti",
+            "required": true
+          },
+          {
+            "name": "pengikut",
+            "description": "Jumlah pengikut",
+            "required": true
+          },
+          {
+            "name": "suka",
+            "description": "Jumlah total like",
+            "required": true
+          },
+          {
+            "name": "bio",
+            "description": "Bio akun TikTok",
+            "required": true
+          },
+          {
+            "name": "image",
+            "description": "URL foto profil",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Fakewa",
+        "endpoint": "/api/maker/fakewa",
+        "filename": "fakewa",
+        "method": "GET",
+        "description": "fakewa endpoint",
+        "params": [
+          {
+            "name": "nama",
+            "description": "nama",
+            "required": true
+          },
+          {
+            "name": "nomor",
+            "description": "nomor",
+            "required": true
+          },
+          {
+            "name": "status",
+            "description": "status",
+            "required": true
+          },
+          {
+            "name": "image",
+            "description": "image",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Flaming",
+        "endpoint": "/api/maker/flaming",
+        "filename": "flaming",
+        "method": "GET",
+        "description": "flaming endpoint",
+        "params": [
+          {
+            "name": "q",
+            "description": "q",
+            "required": true
+          },
+          {
+            "name": "style",
+            "description": "style",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Gay Level",
+        "endpoint": "/api/maker/gay",
+        "filename": "gay",
+        "method": "GET",
+        "description": "Generate gambar gay level dengan avatar pengguna",
+        "params": [
+          {
+            "name": "name",
+            "description": "Nama pengguna",
+            "required": true
+          },
+          {
+            "name": "avatar",
+            "description": "URL foto profil",
+            "required": true
+          },
+          {
+            "name": "num",
+            "description": "Level atau angka gay",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "GEN XNXX",
+        "endpoint": "/api/maker/gen-xnxx",
+        "filename": "gen-xnxx",
+        "method": "GET",
+        "description": "Generate thumbnail video XNXX palsu",
+        "params": [
+          {
+            "name": "title",
+            "description": "Judul video",
+            "required": true
+          },
+          {
+            "name": "image",
+            "description": "URL gambar thumbnail",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Img2Ios",
+        "endpoint": "/api/maker/img2ios",
+        "filename": "img2ios",
+        "method": "GET",
+        "description": "img2ios endpoint",
+        "params": [
+          {
+            "name": "image",
+            "description": "image",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Iqc",
+        "endpoint": "/api/maker/iqc",
+        "filename": "iqc",
+        "method": "GET",
+        "description": "iqc endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Iqc2",
+        "endpoint": "/api/maker/iqc2",
+        "filename": "iqc2",
+        "method": "GET",
+        "description": "iqc2 endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          },
+          {
+            "name": "posisi",
+            "description": "posisi",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Iqc3",
+        "endpoint": "/api/maker/iqc3",
+        "filename": "iqc3",
+        "method": "GET",
+        "description": "iqc3 endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          },
+          {
+            "name": "chatTime",
+            "description": "chatTime",
+            "required": true
+          },
+          {
+            "name": "statusBarTime",
+            "description": "statusBarTime",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Jmk48",
+        "endpoint": "/api/maker/jmk48",
+        "filename": "jmk48",
+        "method": "GET",
+        "description": "jmk48 endpoint",
+        "params": [
+          {
+            "name": "image",
+            "description": "image",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Lugox",
+        "endpoint": "/api/maker/lugox",
+        "filename": "lugox",
+        "method": "GET",
+        "description": "lugox endpoint",
+        "params": [
+          {
+            "name": "name",
+            "description": "name",
+            "required": true
+          },
+          {
+            "name": "username",
+            "description": "username",
+            "required": true
+          },
+          {
+            "name": "comment",
+            "description": "comment",
+            "required": true
+          },
+          {
+            "name": "avatar",
+            "description": "avatar",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Mpls",
+        "endpoint": "/api/maker/mpls",
+        "filename": "mpls",
+        "method": "GET",
+        "description": "mpls endpoint",
+        "params": [
+          {
+            "name": "image",
+            "description": "image",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Musiccard",
+        "endpoint": "/api/maker/musiccard",
+        "filename": "musiccard",
+        "method": "GET",
+        "description": "musiccard endpoint",
+        "params": [
+          {
+            "name": "image",
+            "description": "image",
+            "required": true
+          },
+          {
+            "name": "judul",
+            "description": "judul",
+            "required": true
+          },
+          {
+            "name": "nama",
+            "description": "nama",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Mvp",
+        "endpoint": "/api/maker/mvp",
+        "filename": "mvp",
+        "method": "GET",
+        "description": "mvp endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Nokia",
+        "endpoint": "/api/maker/nokia",
+        "filename": "nokia",
+        "method": "GET",
+        "description": "nokia endpoint",
+        "params": [
+          {
+            "name": "nama",
+            "description": "nama",
+            "required": true
+          },
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "P302",
+        "endpoint": "/api/maker/p302",
+        "filename": "p302",
+        "method": "GET",
+        "description": "p302 endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Pakustad",
+        "endpoint": "/api/maker/pakustad",
+        "filename": "pakustad",
+        "method": "GET",
+        "description": "pakustad endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Profile",
+        "endpoint": "/api/maker/profile",
+        "filename": "profile",
+        "method": "GET",
+        "description": "profile endpoint",
+        "params": []
+      },
+      {
+        "name": "Profileff",
+        "endpoint": "/api/maker/profileff",
+        "filename": "profileff",
+        "method": "GET",
+        "description": "profileff endpoint",
+        "params": [
+          {
+            "name": "nickname",
+            "description": "nickname",
+            "required": true
+          },
+          {
+            "name": "guild",
+            "description": "guild",
+            "required": true
+          },
+          {
+            "name": "bg",
+            "description": "bg",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Qc",
+        "endpoint": "/api/maker/qc",
+        "filename": "qc",
+        "method": "GET",
+        "description": "qc endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          },
+          {
+            "name": "name",
+            "description": "name",
+            "required": true
+          },
+          {
+            "name": "photo",
+            "description": "photo",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Qc2",
+        "endpoint": "/api/maker/qc2",
+        "filename": "qc2",
+        "method": "GET",
+        "description": "qc2 endpoint",
+        "params": [
+          {
+            "name": "name",
+            "description": "name",
+            "required": true
+          },
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          },
+          {
+            "name": "color",
+            "description": "color",
+            "required": true
+          },
+          {
+            "name": "url",
+            "description": "url",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Qcimg",
+        "endpoint": "/api/maker/qcimg",
+        "filename": "qcimg",
+        "method": "GET",
+        "description": "qcimg endpoint",
+        "params": [
+          {
+            "name": "textTop",
+            "description": "textTop",
+            "required": true
+          },
+          {
+            "name": "textBottom",
+            "description": "textBottom",
+            "required": true
+          },
+          {
+            "name": "textThird",
+            "description": "textThird",
+            "required": true
+          },
+          {
+            "name": "bg",
+            "description": "bg",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Qrisimg",
+        "endpoint": "/api/maker/qrisimg",
+        "filename": "qrisimg",
+        "method": "GET",
+        "description": "qrisimg endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Sertipikat",
+        "endpoint": "/api/maker/sertipikat",
+        "filename": "sertipikat",
+        "method": "GET",
+        "description": "sertipikat endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          }
+        ]
+      },
+      {  
+        "name": "Spongebob",
+        "endpoint": "/api/maker/spongebob",
+        "filename": "spongebob",
+        "method": "GET",
+        "description": "spongebob endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          }
+        ]
+      },
+      {  
+        "name": "Wifecheck",
+        "endpoint": "/api/maker/wifecheck",
+        "filename": "wifecheck",
+        "method": "GET",
+        "description": "wifecheck endpoint",
+        "params": [
+          {
+            "name": "image",
+            "description": "image",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Yoratama",
+        "endpoint": "/api/maker/yoratama",
+        "filename": "yoratama",
+        "method": "GET",
+        "description": "yoratama endpoint",
+        "params": [
+          {
+            "name": "text",
+            "description": "text",
+            "required": true
+          }
+        ]
+      }
+    ],
+    "random": [
+      {
+        "name": "Aesthetic",
+        "endpoint": "/api/random/aesthetic",
+        "filename": "aesthetic",
+        "method": "GET",
+        "description": "aesthetic endpoint",
+        "params": []
+      },
+      {
+        "name": "Akiyama",
+        "endpoint": "/api/random/akiyama",
+        "filename": "akiyama",
+        "method": "GET",
+        "description": "akiyama endpoint",
+        "params": []
+      },
+      {
+        "name": "Anna",
+        "endpoint": "/api/random/anna",
+        "filename": "anna",
+        "method": "GET",
+        "description": "anna endpoint",
+        "params": []
+      },
+      {
+        "name": "Ayuzawa",
+        "endpoint": "/api/random/ayuzawa",
+        "filename": "ayuzawa",
+        "method": "GET",
+        "description": "ayuzawa endpoint",
+        "params": []
+      },
+      {
+        "name": "Bike",
+        "endpoint": "/api/random/bike",
+        "filename": "bike",
+        "method": "GET",
+        "description": "bike endpoint",
+        "params": []
+      },
+      {
+        "name": "Blackpink",
+        "endpoint": "/api/random/blackpink",
+        "filename": "blackpink",
+        "method": "GET",
+        "description": "blackpink endpoint",
+        "params": []
+      },
+      {
+        "name": "Bluearchive",
+        "endpoint": "/api/random/bluearchive",
+        "filename": "bluearchive",
+        "method": "GET",
+        "description": "bluearchive endpoint",
+        "params": []
+      },
+      {
+        "name": "Boneka",
+        "endpoint": "/api/random/boneka",
+        "filename": "boneka",
+        "method": "GET",
+        "description": "boneka endpoint",
+        "params": []
+      },
+      {
+        "name": "Boruto",
+        "endpoint": "/api/random/boruto",
+        "filename": "boruto",
+        "method": "GET",
+        "description": "boruto endpoint",
+        "params": []
+      },
+      {
+        "name": "Car",
+        "endpoint": "/api/random/car",
+        "filename": "car",
+        "method": "GET",
+        "description": "car endpoint",
+        "params": []
+      },
+      {
+        "name": "Cat",
+        "endpoint": "/api/random/cat",
+        "filename": "cat",
+        "method": "GET",
+        "description": "cat endpoint",
+        "params": []
+      },
+      {
+        "name": "Cewebohay",
+        "endpoint": "/api/random/cewebohay",
+        "filename": "cewebohay",
+        "method": "GET",
+        "description": "cewebohay endpoint",
+        "params": []
+      },
+      {
+        "name": "Cosplay",
+        "endpoint": "/api/random/cosplay",
+        "filename": "cosplay",
+        "method": "GET",
+        "description": "cosplay endpoint",
+        "params": []
+      },
+      {
+        "name": "Doggo",
+        "endpoint": "/api/random/doggo",
+        "filename": "doggo",
+        "method": "GET",
+        "description": "doggo endpoint",
+        "params": []
+      },
+      {
+        "name": "Elaina",
+        "endpoint": "/api/random/elaina",
+        "filename": "elaina",
+        "method": "GET",
+        "description": "elaina endpoint",
+        "params": []
+      },
+      {
+        "name": "Emilia",
+        "endpoint": "/api/random/emilia",
+        "filename": "emilia",
+        "method": "GET",
+        "description": "emilia endpoint",
+        "params": []
+      },
+      {
+        "name": "Gabut1",
+        "endpoint": "/api/random/gabut1",
+        "filename": "gabut1",
+        "method": "GET",
+        "description": "gabut1 endpoint",
+        "params": []
+      },
+      {
+        "name": "Gabut2",
+        "endpoint": "/api/random/gabut2",
+        "filename": "gabut2",
+        "method": "GET",
+        "description": "gabut2 endpoint",
+        "params": []
+      },
+      {  
+        "name": "Justina",
+        "endpoint": "/api/random/justina",
+        "filename": "justina",
+        "method": "GET",
+        "description": "justina endpoint",
+        "params": []
+      },
+      {
+        "name": "Kayes",
+        "endpoint": "/api/random/kayes",
+        "filename": "kayes",
+        "method": "GET",
+        "description": "kayes endpoint",
+        "params": []
+      },
+      {
+        "name": "Kpop",
+        "endpoint": "/api/random/kpop",
+        "filename": "kpop",
+        "method": "GET",
+        "description": "kpop endpoint",
+        "params": []
+      },
+      {
+        "name": "Loli",
+        "endpoint": "/api/random/loli",
+        "filename": "loli",
+        "method": "GET",
+        "description": "loli endpoint",
+        "params": []
+      },
+      { 
+        "name": "Neko",
+        "endpoint": "/api/random/neko",
+        "filename": "neko",
+        "method": "GET",
+        "description": "neko endpoint",
+        "params": []
+      },
+      {
+        "name": "Notnot",
+        "endpoint": "/api/random/notnot",
+        "filename": "notnot",
+        "method": "GET",
+        "description": "notnot endpoint",
+        "params": []
+      },
+      {
+        "name": "Ppcp",
+        "endpoint": "/api/random/ppcp",
+        "filename": "ppcp",
+        "method": "GET",
+        "description": "ppcp endpoint",
+        "params": []
+      },
+      {
+        "name": "Profile",
+        "endpoint": "/api/random/profile",
+        "filename": "profile",
+        "method": "GET",
+        "description": "profile endpoint",
+        "params": []
+      },
+      {
+        "name": "Rose",
+        "endpoint": "/api/random/rose",
+        "filename": "rose",
+        "method": "GET",
+        "description": "rose endpoint",
+        "params": []
+      },
+      {
+        "name": "Ryujin",
+        "endpoint": "/api/random/ryujin",
+        "filename": "ryujin",
+        "method": "GET",
+        "description": "ryujin endpoint",
+        "params": []
+      },
+      {
+        "name": "Shota",
+        "endpoint": "/api/random/shota",
+        "filename": "shota",
+        "method": "GET",
+        "description": "shota endpoint",
+        "params": []
+      },
+      {
+        "name": "Tiktok",
+        "endpoint": "/api/random/tiktok",
+        "filename": "tiktok",
+        "method": "GET",
+        "description": "tiktok endpoint",
+        "params": []
+      },
+      {
+        "name": "Ulzzanggirl",
+        "endpoint": "/api/random/ulzzanggirl",
+        "filename": "ulzzanggirl",
+        "method": "GET",
+        "description": "ulzzanggirl endpoint",
+        "params": []
+      }
+    ]
+  }
+}
